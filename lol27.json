@@ -10441,54 +10441,6 @@
         ],
         "heroes": [
             {
-                "name": "Captain of Minas Tirith",
-                "factions": [
-                    {
-                        "name": "Gondor",
-                        "heroicTier": "Hero of Fortitude"
-                    }
-                ],
-                "unlimited": true,
-                "points": 60,
-                "movement": 6,
-                "fight": 5,
-                "shoot": 4,
-                "strength": 4,
-                "defence": 7,
-                "attack": 2,
-                "wounds": 2,
-                "courage": 6,
-                "intelligence": 6,
-                "might": 2,
-                "will": 1,
-                "fate": 1,
-                "race": [
-                    "Man"
-                ],
-                "faction": [
-                    "Gondor"
-                ],
-                "unitType": [
-                    "Hero",
-                    "Infantry"
-                ],
-                "baseSize": [
-                    "25mm"
-                ],
-                "heroicActions": [
-                    "Heroic March"
-                ],
-                "options": [],
-                "specialRules": [
-                    "Shieldwall"
-                ],
-                "wargear": [
-                    "Heavy Armour",
-                    "Hand weapon",
-                    "Shield"
-                ]
-            },
-            {
                 "name": "Knight of the White Tower",
                 "factions": [
                     {
@@ -10536,6 +10488,54 @@
                     "White Sword of Gondor"
                 ],
                 "options": []
+            },
+            {
+                "name": "Captain of Minas Tirith",
+                "factions": [
+                    {
+                        "name": "Gondor",
+                        "heroicTier": "Hero of Fortitude"
+                    }
+                ],
+                "unlimited": true,
+                "points": 60,
+                "movement": 6,
+                "fight": 5,
+                "shoot": 4,
+                "strength": 4,
+                "defence": 7,
+                "attack": 2,
+                "wounds": 2,
+                "courage": 6,
+                "intelligence": 6,
+                "might": 2,
+                "will": 1,
+                "fate": 1,
+                "race": [
+                    "Man"
+                ],
+                "faction": [
+                    "Gondor"
+                ],
+                "unitType": [
+                    "Hero",
+                    "Infantry"
+                ],
+                "baseSize": [
+                    "25mm"
+                ],
+                "heroicActions": [
+                    "Heroic March"
+                ],
+                "options": [],
+                "specialRules": [
+                    "Shieldwall"
+                ],
+                "wargear": [
+                    "Heavy Armour",
+                    "Hand weapon",
+                    "Shield"
+                ]
             },
             {
                 "name": "Halbarad",
@@ -10662,11 +10662,176 @@
         ],
         "warriors": [
             {
+                "name": "Guard of the Fountain Court",
+                "factions": [
+                    "Gondor"
+                ],
+                "availableIn": [
+                    {
+                        "all": [
+                            {
+                                "in": "Denethor, Steward of Gondor"
+                            },
+                            {
+                                "in": "Minas Tirith"
+                            }
+                        ]
+                    },
+                    {
+                        "all": [
+                            {
+                                "in": "King of Men (Gondor)"
+                            },
+                            {
+                                "in": "Realms of Men"
+                            }
+                        ]
+                    }
+                ],
+                "points": 10,
+                "movement": 6,
+                "fight": 4,
+                "shoot": 4,
+                "strength": 3,
+                "defence": 6,
+                "attack": 1,
+                "wounds": 1,
+                "courage": 7,
+                "intelligence": 6,
+                "race": [
+                    "Man"
+                ],
+                "faction": [
+                    "Gondor"
+                ],
+                "unitType": [
+                    "Warrior",
+                    "Infantry",
+                    "Elite"
+                ],
+                "baseSize": [
+                    "25mm"
+                ],
+                "options": [],
+                "specialRules": [
+                    "Bodyguard",
+                    "Protectors of the White Tree"
+                ],
+                "wargear": [
+                    "Heavy Armour",
+                    "Hand weapon",
+                    "Spear"
+                ]
+            },
+            {
+                "name": "Warrior of Numenor",
+                "factions": [
+                    "Gondor"
+                ],
+                "points": 9,
+                "movement": 6,
+                "fight": 5,
+                "shoot": 4,
+                "strength": 4,
+                "defence": 4,
+                "attack": 1,
+                "wounds": 1,
+                "courage": 7,
+                "intelligence": 7,
+                "race": [
+                    "Man"
+                ],
+                "faction": [
+                    "Numenor"
+                ],
+                "unitType": [
+                    "Warrior",
+                    "Infantry"
+                ],
+                "baseSize": [
+                    "25mm"
+                ],
+                "options": [
+                    {
+                        "name": "Shield and spear",
+                        "points": 2,
+                        "requireChooseOneKey": "a"
+                    },
+                    {
+                        "name": "Longbow",
+                        "points": 1,
+                        "requireChooseOneKey": "a"
+                    },
+                    {
+                        "name": "Shield",
+                        "points": 1,
+                        "requireChooseOneKey": "a"
+                    }
+                ],
+                "specialRules": [],
+                "wargear": [
+                    "Armour",
+                    "Hand weapon"
+                ]
+            },
+            {
+                "name": "Ranger of Gondor",
+                "factions": [
+                    "Gondor"
+                ],
+                "points": 8,
+                "movement": 6,
+                "fight": 4,
+                "shoot": 3,
+                "strength": 3,
+                "defence": 4,
+                "attack": 1,
+                "wounds": 1,
+                "courage": 7,
+                "intelligence": 6,
+                "race": [
+                    "Man"
+                ],
+                "faction": [
+                    "Gondor"
+                ],
+                "unitType": [
+                    "Warrior",
+                    "Infantry"
+                ],
+                "baseSize": [
+                    "25mm"
+                ],
+                "options": [
+                    {
+                        "name": "Banner",
+                        "points": 25,
+                        "chooseOneKey": "a"
+                    },
+                    {
+                        "name": "War horn",
+                        "points": 25,
+                        "chooseOneKey": "a"
+                    },
+                    {
+                        "name": "Spear",
+                        "points": 1,
+                        "chooseOneKey": "a"
+                    }
+                ],
+                "specialRules": [
+                    "Woodland Creature"
+                ],
+                "wargear": [
+                    "Armour",
+                    "Bow",
+                    "Hand weapon"
+                ]
+            },
+            {
                 "name": "Knight of Dol Amroth",
                 "factions": [
-                    {
-                        "name": "Gondor"
-                    }
+                    "Gondor"
                 ],
                 "availableIn": [
                     {
@@ -10783,183 +10948,20 @@
                         ]
                     }
                 ]
-            },
-            {
-                "name": "Ranger of Gondor",
-                "factions": [
-                    {
-                        "name": "Gondor"
-                    }
-                ],
-                "points": 8,
-                "movement": 6,
-                "fight": 4,
-                "shoot": 3,
-                "strength": 3,
-                "defence": 4,
-                "attack": 1,
-                "wounds": 1,
-                "courage": 7,
-                "intelligence": 6,
-                "race": [
-                    "Man"
-                ],
-                "faction": [
-                    "Gondor"
-                ],
-                "unitType": [
-                    "Warrior",
-                    "Infantry"
-                ],
-                "baseSize": [
-                    "25mm"
-                ],
-                "options": [
-                    {
-                        "name": "Banner",
-                        "points": 25,
-                        "chooseOneKey": "a"
-                    },
-                    {
-                        "name": "War horn",
-                        "points": 25,
-                        "chooseOneKey": "a"
-                    },
-                    {
-                        "name": "Spear",
-                        "points": 1,
-                        "chooseOneKey": "a"
-                    }
-                ],
-                "specialRules": [
-                    "Woodland Creature"
-                ],
-                "wargear": [
-                    "Armour",
-                    "Bow",
-                    "Hand weapon"
-                ]
-            },
-            {
-                "name": "Warrior of Numenor",
-                "factions": [
-                    {
-                        "name": "Gondor"
-                    }
-                ],
-                "points": 9,
-                "movement": 6,
-                "fight": 5,
-                "shoot": 4,
-                "strength": 4,
-                "defence": 4,
-                "attack": 1,
-                "wounds": 1,
-                "courage": 7,
-                "intelligence": 7,
-                "race": [
-                    "Man"
-                ],
-                "faction": [
-                    "Numenor"
-                ],
-                "unitType": [
-                    "Warrior",
-                    "Infantry"
-                ],
-                "baseSize": [
-                    "25mm"
-                ],
-                "options": [
-                    {
-                        "name": "Shield and spear",
-                        "points": 2,
-                        "requireChooseOneKey": "a"
-                    },
-                    {
-                        "name": "Longbow",
-                        "points": 1,
-                        "requireChooseOneKey": "a"
-                    },
-                    {
-                        "name": "Shield",
-                        "points": 1,
-                        "requireChooseOneKey": "a"
-                    }
-                ],
-                "specialRules": [],
-                "wargear": [
-                    "Armour",
-                    "Hand weapon"
-                ]
-            },
-            {
-                "name": "Guard of the Fountain Court",
-                "factions": [
-                    {
-                        "name": "Gondor"
-                    }
-                ],
-                "availableIn": [
-                    {
-                        "all": [
-                            {
-                                "in": "Denethor, Steward of Gondor"
-                            },
-                            {
-                                "in": "Minas Tirith"
-                            }
-                        ]
-                    },
-                    {
-                        "all": [
-                            {
-                                "in": "King of Men (Gondor)"
-                            },
-                            {
-                                "in": "Realms of Men"
-                            }
-                        ]
-                    }
-                ],
-                "points": 10,
-                "movement": 6,
-                "fight": 4,
-                "shoot": 4,
-                "strength": 3,
-                "defence": 6,
-                "attack": 1,
-                "wounds": 1,
-                "courage": 7,
-                "intelligence": 6,
-                "race": [
-                    "Man"
-                ],
-                "faction": [
-                    "Gondor"
-                ],
-                "unitType": [
-                    "Warrior",
-                    "Infantry",
-                    "Elite"
-                ],
-                "baseSize": [
-                    "25mm"
-                ],
-                "options": [],
-                "specialRules": [
-                    "Bodyguard",
-                    "Protectors of the White Tree"
-                ],
-                "wargear": [
-                    "Heavy Armour",
-                    "Hand weapon",
-                    "Spear"
-                ]
             }
         ],
         "siegeEquipment": [],
         "gear": [
+            {
+                "name": "Armour",
+                "type": "armour",
+                "modifiesStats": [
+                    {
+                        "stat": "defence",
+                        "modifier": 1
+                    }
+                ]
+            },
             {
                 "name": "Heavy Armour",
                 "type": "armour",
@@ -10969,6 +10971,11 @@
                         "modifier": 2
                     }
                 ]
+            },
+            {
+                "name": "White Sword of Gondor",
+                "definition": "This is a two-handed weapon. Additionally, Strikes made with a White Sword of Gondor have the Mighty Blow special rule.",
+                "tag": "Active"
             },
             {
                 "name": "Shield",
@@ -10988,29 +10995,14 @@
                 "name": "Bow",
                 "type": "bow",
                 "definition": "24\" Range, 2 Strength"
-            },
-            {
-                "name": "Armour",
-                "type": "armour",
-                "modifiesStats": [
-                    {
-                        "stat": "defence",
-                        "modifier": 1
-                    }
-                ]
-            },
-            {
-                "name": "White Sword of Gondor",
-                "definition": "This is a two-handed weapon. Additionally, Strikes made with a White Sword of Gondor have the Mighty Blow special rule.",
-                "tag": "Active"
             }
         ],
         "magicalPowers": [],
         "keywords": [
             {
-                "name": "The Bladelord's Skill",
-                "definition": "If this model is Engaged in Combat with an enemy Hero, it may re-roll a single D6 during the Duel Roll.",
-                "tag": "Active"
+                "name": "Woodland Creature",
+                "tag": "Active",
+                "definition": "A model with this special rule may Move through woods and forests that are classed as Difficult Terrain as if they are Open Ground. If a Cavalry model has this special rule, but their Mount does not, then this rule does not apply to the Mount. If a Mount has this special rule, then they will still gain their Cavalry Charge bonuses when they Charge, even if the rider does not have this special rule. This special rule may be used by models that are not yet on the battlefield."
             },
             {
                 "name": "Shieldwall",
@@ -11018,14 +11010,14 @@
                 "definition": "If this model is carrying a shield, then whilst it is in base contact with two or more other friendly models who also have this special rule and are carrying a shield, then this model receives an additional +1 bonus to its Defence. In Combat, this bonus is calculated before the model Backs Away.\n                Models that are Prone or have the Cavalry keyword cannot benefit from, or provide an ally with the benefit from, this special rule."
             },
             {
-                "name": "Woodland Creature",
-                "tag": "Active",
-                "definition": "A model with this special rule may Move through woods and forests that are classed as Difficult Terrain as if they are Open Ground. If a Cavalry model has this special rule, but their Mount does not, then this rule does not apply to the Mount. If a Mount has this special rule, then they will still gain their Cavalry Charge bonuses when they Charge, even if the rider does not have this special rule. This special rule may be used by models that are not yet on the battlefield."
-            },
-            {
                 "name": "Rapid Fire (Bolt Thrower)",
                 "tag": "Active",
                 "definition": "A Gondor Avenger Bolt Thrower doesn't shoot like a normal Siege Engine. Instead, it may make D6 shooting attacks in the same way as a normal Missile Weapon. No Scatter is required for these shots; they will either hit or miss. Each shot may be fully resolved before determining the target of the next one. Shots fired by a Gondor Avenger Bolt Thrower do not kill their targets outright if they Wound them."
+            },
+            {
+                "name": "The Bladelord's Skill",
+                "definition": "If this model is Engaged in Combat with an enemy Hero, it may re-roll a single D6 during the Duel Roll.",
+                "tag": "Active"
             }
         ],
         "armyBonuses": []
