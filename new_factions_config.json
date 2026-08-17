@@ -1,0 +1,578 @@
+{
+  "alignments": [
+    "Kingdoms of Men",
+    "Children of the Valar",
+    "Remnants of Evil"
+  ],
+  "customFactions": [
+    {
+      "name": "Gondor",
+      "alignment": "Kingdoms of Men",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Captain of Minas Tirith",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Knight of the White Tower",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Halbarad",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Gondor Avenger Bolt Thrower",
+          "heroicTier": "Minor Hero"
+        },
+        {
+          "name": "Minas Tirith Siege Veteran",
+          "heroicTier": "Minor Hero"
+        }
+      ],
+      "warriors": [
+        "Guard of the Fountain Court",
+        "Warrior of Numenor",
+        "Ranger of Gondor",
+        "Knight of Dol Amroth",
+        "Minas Tirith Siege Crew"
+      ]
+    },
+    {
+      "name": "Rohan",
+      "alignment": "Kingdoms of Men",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Captain of Rohan",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Olwyn, Shieldmaiden of Rohan",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Hama, Captain of Rohan",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Rohan Royal Guard",
+        "Fledgeling Great Eagle",
+        "Warrior of Rohan",
+        "Rider of Rohan"
+      ]
+    },
+    {
+      "name": "Dale",
+      "alignment": "Kingdoms of Men",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Captain of Dale",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Anborn, Ranger of Ithilien",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Frída Tallspear",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Windlance",
+          "heroicTier": "Minor Hero"
+        },
+        {
+          "name": "Dale Siege Veteran",
+          "heroicTier": "Minor Hero"
+        }
+      ],
+      "warriors": [
+        "Knight of Dale",
+        "Warrior of Dale",
+        "Lake-town Militia",
+        "Dale Crew"
+      ]
+    },
+    {
+      "name": "Arnor",
+      "alignment": "Kingdoms of Men",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Captain of Arnor",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Malbeth the Seer",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Argadir, Captain of Arnor",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Knight of Arnor",
+        "Ranger of the North",
+        "Warrior of Arnor",
+        "Ranger of Arnor"
+      ]
+    },
+    {
+      "name": "Forgiven East",
+      "alignment": "Kingdoms of Men",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Haradrim Chieftain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Brorgir the Conjurer",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Black Númenórean Marshal",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Great Beast of Gorgoroth",
+          "heroicTier": "Minor Hero"
+        },
+        {
+          "name": "Orc Commander (Great Beast)",
+          "heroicTier": "Minor Hero"
+        },
+        {
+          "name": "Great Beast",
+          "heroicTier": "Minor Hero"
+        },
+        {
+          "name": "Howdah (Great Beast)",
+          "heroicTier": "Minor Hero"
+        }
+      ],
+      "warriors": [
+        "Watcher of Kârna",
+        "Haradrim Warrior",
+        "Abrakhan Merchant Guard"
+      ]
+    },
+    {
+      "name": "Eriador",
+      "alignment": "Kingdoms of Men",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Captain of Dol Amroth",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Angbor the Fearless",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Duinhir, Lord of the Blackroot Vale",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Ranger of the North",
+          "heroicTier": "Minor Hero"
+        }
+      ],
+      "warriors": [
+        "Clansman of Lamedon",
+        "Hobbit Archer",
+        "Blackroot Vale Archer",
+        "Knight of Dol Amroth"
+      ]
+    },
+    {
+      "name": "Lindon",
+      "alignment": "Children of the Valar",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Rivendell Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Erestor",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Arwen Undomiel",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Rivendell Knight",
+        "Palace Guard",
+        "Rivendell Warrior",
+        "Hobbit Militia"
+      ]
+    },
+    {
+      "name": "Erebor",
+      "alignment": "Children of the Valar",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Erebor Dwarf Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Gloin the Dwarf, Champion of Erebor",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Nori the Dwarf, Champion of Erebor",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Grim Hammer Warrior",
+        "Vault Warden Team",
+        "Erebor Dwarf Warrior",
+        "Iron Hills Goat Rider"
+      ]
+    },
+    {
+      "name": "The Iron Hills",
+      "alignment": "Children of the Valar",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Iron Hills Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Gimli, Son of Gloin",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Bofur the Dwarf, Champion of Erebor",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Iron Hills Ballista",
+          "heroicTier": "Minor Hero"
+        },
+        {
+          "name": "Iron Hills Dwarf Siege Veteran",
+          "heroicTier": "Minor Hero"
+        }
+      ],
+      "warriors": [
+        "Iron Hills Chariot",
+        "Iron Hills Warrior",
+        "Iron Hills Goat Rider",
+        "Iron Hills Dwarf Crew" 
+      ]
+    },
+    {
+      "name": "Mirkwood",
+      "alignment": "Children of the Valar",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Mirkwood Ranger Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Tauriel, Ranger of Mirkwood",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Mirkwood Elf Captain",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Mirkwood Ranger",
+        "Beorning",
+        "Mirkwood Elf Warrior",
+        "Mirkwood Elf Knight"
+      ]
+    },
+    {
+      "name": "Lorien",
+      "alignment": "Children of the Valar",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Galadhrim Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Lothlorien Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Rúmil, Warden of Caras Galadhon",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Wood Elf Sentinel",
+        "Fledgeling Great Eagle",
+        "Lothlorien Warrior",
+        "Galadhrim Warrior",
+        "Galadhrim Knight"
+      ]
+    },
+    {
+      "name": "Blue Mountains",
+      "alignment": "Children of the Valar",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Dwarf Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "King's Champion Group",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Herald",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Flói Stonehand",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Iron Guard",
+        "Ent",
+        "Dwarf Warrior",
+        "Dwarf Ranger"
+      ]
+    },
+    {
+      "name": "Mordor",
+      "alignment": "Remnants of Evil",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Morannon Orc Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Goroth, Captain of the Morannon",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Gorbag, Orc Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Mordor Siege Bow",
+          "heroicTier": "Minor Hero"
+        },
+        {
+          "name": "Mordor Orc Siege Veteran",
+          "heroicTier": "Minor Hero"
+        }
+      ],
+      "warriors": [
+        "Mordor Troll",
+        "Morannon Orc Warrior",
+        "Morgul Stalker",
+        "Black Numenorean Knight",
+        "Mordor Orc Siege Crew"
+      ]
+    },
+    {
+      "name": "Misty Mountains",
+      "alignment": "Remnants of Evil",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Moria Goblin Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Grinnah",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Gróblog",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Cave Troll",
+        "Goblin Warrior",
+        "Moria Blackshield Warrior",
+        "Moria Goblin Prowler",
+        "Warg Marauder"
+      ]
+    },
+    {
+      "name": "Isengard",
+      "alignment": "Remnants of Evil",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Uruk-Hai Scout Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Yazneg, Hunter Orc Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Narzug, Hunter Orc Captain",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Uruk-hai Berserker",
+        "Crebain",
+        "Uruk-hai Scout",
+        "Wild Man of Dunland",
+        "Isengard Warg Rider"
+      ]
+    },
+    {
+      "name": "Rhun",
+      "alignment": "Remnants of Evil",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Easterling Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "The Shadow of Rhudaur",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Easterling Dragon Knight",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Dragon Cult Acolyte",
+        "War Drake of Rhun",
+        "Khandish Charioteer",
+        "Easterling Warrior",
+        "Easterling Kataphrakt",
+        "Khandish Horseman"
+      ]
+    },
+    {
+      "name": "Angmar",
+      "alignment": "Remnants of Evil",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Angmar Orc Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Castellan of Dol Guldur",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Gorûlf Ironskin",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Spectre",
+        "Werewolf",
+        "Angmar Orc Warrior",
+        "Warrior of Carn Dum",
+        "Hunter Orc Warrior"
+      ]
+    },
+    {
+      "name": "Umbar",
+      "alignment": "Remnants of Evil",
+      "additionalRules": [],
+      "armyBonuses": [],
+      "specialRules": [],
+      "heroes": [
+        {
+          "name": "Corsair Captain",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "The Mouth of Sauron",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Suladan, The Serpent Lord",
+          "heroicTier": "Hero of Fortitude"
+        }
+      ],
+      "warriors": [
+        "Corsair Crossbowman",
+        "Black Numenorean Warrior",
+        "Corsair of Umbar"
+      ]
+    }
+  ],
+  "customisations": {
+    "heroes":[
+      {
+        "name": "Knight of the White Tower",
+        "remove": [
+          {"wargear": "hand weapon"}
+        ]
+      },
+      {
+        "name": "Halbarad",
+        "rename": "Ranger of Ithilien",
+        "append": [
+          {"wargear": "Longbow"},
+          {"specialRules": "Well-aimed Shot"}
+        ]
+      }    
+    ],
+    "warriors":[
+
+    ]
+  }
+}
