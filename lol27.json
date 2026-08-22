@@ -2086,6 +2086,15 @@
     ],
     "validations": [
         {
+            "type": "minimumTier",
+            "allianceLevels": [
+            "secondary",
+            "none"
+            ],
+            "minimum": 1,
+            "message": "You must have at least one hero of at least Hero of Valour per faction for a Convenient or Impossible alliance."
+        },
+        {
             "type": "propertyPerTier",
             "property": "keywords",
             "value": [
