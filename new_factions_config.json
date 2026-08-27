@@ -4,6 +4,44 @@
     "Children of the Valar",
     "Remnants of Evil"
   ],
+  "gameConfig": {
+    "game": "Legion of Legends 2027",
+    "credit": [
+      {
+        "type": "text",
+        "text": "Original Data provided by Now For Wrath, modified for Legions of Legends"
+      }
+    ],
+    "usePrimarySecondaryAllianceLevels": "true",
+    "allianceTerms": {
+      "primary": "Legendary",
+      "secondary": "Broken",
+      "none": "Forbidden"
+    },
+    "toggles": [
+      {
+        "property": "legacy",
+        "label": "Include Legacy",
+        "default": true
+      },
+      {
+        "property": "siegeEquipment",
+        "label": "Siege Equipment",
+        "default": false
+      }
+    ],
+    "data": {
+      "factions": [],
+      "heroicTiers": [],
+      "heroes": [],
+      "warriors": [],
+      "siegeEquipment": [],
+      "gear": [],
+      "magicalPowers": [],
+      "keywords": [],
+      "armyBonuses": []
+    }
+  },
   "customFactions": [
     {
       "name": "Gondor",
@@ -12,10 +50,6 @@
       "armyBonuses": [],
       "specialRules": [],
       "heroes": [
-        {
-          "name": "Captain of Minas Tirith",
-          "heroicTier": "Hero of Fortitude"
-        },
         {
           "name": "Knight of the White Tower",
           "heroicTier": "Hero of Fortitude"
@@ -31,13 +65,20 @@
         {
           "name": "Minas Tirith Siege Veteran",
           "heroicTier": "Minor Hero"
+        },
+        {
+          "name": "Captain of Numenor",
+          "heroicTier": "Hero of Fortitude"
         }
       ],
       "warriors": [
         "Guard of the Fountain Court",
         "Warrior of Numenor",
         "Ranger of Gondor",
-        "Knight of Dol Amroth",
+        {
+          "name": "Knight of Dol Amroth",
+          "duplicateAs": "Knight of Gondor"
+        },
         "Minas Tirith Siege Crew"
       ]
     },
@@ -126,7 +167,10 @@
       "warriors": [
         "Knight of Arnor",
         "Ranger of the North",
-        "Warrior of Arnor",
+        {
+          "name": "Warrior of Minas Tirith",
+          "duplicateAs": "Warrior of Arnor"
+        },
         "Ranger of Arnor"
       ]
     },
@@ -200,7 +244,10 @@
         "Clansman of Lamedon",
         "Hobbit Archer",
         "Blackroot Vale Archer",
-        "Knight of Dol Amroth"
+        {
+          "name": "Knight of Dol Amroth",
+          "duplicateAs": "Knight of Eriador"
+        }
       ]
     },
     {
@@ -254,7 +301,12 @@
         "Grim Hammer Warrior",
         "Vault Warden Team",
         "Erebor Dwarf Warrior",
-        "Iron Hills Goat Rider"
+        {
+          "name": "Iron Hills Goat Rider",
+          "duplicateAs": "Erebor Goat Rider"
+        },
+        "Iron Shield Bearer",
+        "Foe Spear Wielder"
       ]
     },
     {
@@ -277,11 +329,11 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
-          "name": "Iron Hills Ballista",
+          "name": "Dwarven Ballista",
           "heroicTier": "Minor Hero"
         },
         {
-          "name": "Iron Hills Dwarf Siege Veteran",
+          "name": "Dwarf Siege Veteran",
           "heroicTier": "Minor Hero"
         }
       ],
@@ -289,7 +341,7 @@
         "Iron Hills Chariot",
         "Iron Hills Warrior",
         "Iron Hills Goat Rider",
-        "Iron Hills Dwarf Crew" 
+        "Dwarf Siege Crew"
       ]
     },
     {
@@ -360,6 +412,10 @@
         },
         {
           "name": "King's Champion Group",
+          "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "King's Champion",
           "heroicTier": "Hero of Fortitude"
         },
         {
@@ -555,24 +611,715 @@
     }
   ],
   "customisations": {
-    "heroes":[
+    "transplant": [
+      {
+        "name": "Fell beast",
+        "fromSection": "gear",
+        "toSection": "warriors"
+      }
+    ],
+    "appendData":{
+      "tag":"unitType",
+      "value":"Elite",
+      "heroes": [
+        "Gondor Avenger Bolt Thrower",
+        "Windlance",
+        "Great Beast of Gorgoroth",
+        "Dwarven Ballista",
+        "Mordor Siege Bow"
+      ],
+      "warriors": [
+        "Guard of the Fountain Court",
+        "Rohan Royal Guard",
+        "Fledgeling Great Eagle",
+        "Knight of Dale",
+        "Knight of Arnor",
+        "Ranger of the North",
+        "Clansman of Lamedon",
+        "Hobbit Archer",
+        "Watcher of Kârna",
+        "Rivendell Knight",
+        "Palace Guard",
+        "Grim Hammer Warrior",
+        "Vault Warden Team",
+        "Iron Hills Chariot",
+        "Mirkwood Ranger",
+        "Beorning",
+        "Wood Elf Sentinel",
+        "Iron Guard",
+        "Ent",
+        "Mordor Troll",
+        "Cave Troll",
+        "Moria Blackshield Warrior",
+        "Uruk-hai Berserker",
+        "Crebain",
+        "Dragon Cult Acolyte",
+        "War Drake of Rhun",
+        "Khandish Charioteer",
+        "Spectre",
+        "Werewolf",
+        "Corsair Crossbowman"
+      ]
+    },
+    "heroes": [
       {
         "name": "Knight of the White Tower",
-        "remove": [
-          {"wargear": "hand weapon"}
-        ]
+        "remove": {
+          "wargear": [
+            "Hand weapon"
+          ]
+        }
       },
       {
         "name": "Halbarad",
-        "rename": "Ranger of Ithilien",
-        "append": [
-          {"wargear": "Longbow"},
-          {"specialRules": "Well-aimed Shot"}
-        ]
-      }    
+        "append": {
+          "wargear": [
+            "Longbow"
+          ],
+          "specialRules": [
+            "Well-aimed Shot"
+          ]
+        },
+        "remove": {
+          "wargear": [
+            "Bow"
+          ]
+        },
+        "update": {
+          "points": 75
+        },
+        "rename": "Ranger-Marshal of Ithilien"
+      },
+      {
+        "name": "Olwyn, Shieldmaiden of Rohan",
+        "rename": "Shieldmaiden of Rohan"
+      },
+      {
+        "name": "Hama, Captain of Rohan",
+        "rename": "Warden of Rohan"
+      },
+      {
+        "name": "Anborn, Ranger of Ithilien",
+        "rename": "Ranger Captain of Dale",
+        "append": {
+          "wargear": [
+            "Esgaroth Bow"
+          ]
+        },
+        "remove": {
+          "wargear": [
+            "Bow"
+          ]
+        },
+        "update": {
+          "attack": 2,
+          "wounds": 2,
+          "points": 60
+        }
+      },
+      {
+        "name": "Frída Tallspear",
+        "rename": "Protector of Dale",
+        "remove": {
+          "specialRules": [
+            "\"Go for the Horse!\""
+          ]
+        },
+        "append": {
+          "specialRules": [
+            "Wall of Blades"
+          ],
+          "options": [
+            {
+              "name": "Esgaroth Bow",
+              "points": 5
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            }
+          ]
+        },
+        "update": {
+          "points": 70
+        }
+      },
+      {
+        "name": "Captain of Numenor",
+        "rename": "Captain of Gondor"
+      },
+      {
+        "name": "Argadir, Captain of Arnor",
+        "rename": "Guardian of Arnor"
+      },
+      {
+        "name": "Brorgir the Conjurer",
+        "rename": "Wizard's Apprentice",
+        "update": {
+          "defence": 5
+        },
+        "append": {
+          "gear": ["Spear"],
+          "specialRules": ["Poisoned Attacks"]
+        }
+      },
+      {
+        "name": "Black Númenórean Marshal",
+        "rename": "Southern Crusader",
+        "update": {
+          "Fate": 2
+        }
+      },
+      {
+        "name": "Great Beast of Gorgoroth",
+        "rename": "Young Mumak",
+        "update": {
+          "shoot": 4
+        }
+      },
+      {
+        "name": "Captain of Dol Amroth",
+        "rename": "Captain of Eriador"
+      },
+      {
+        "name": "Angbor the Fearless",
+        "rename": "William Wallace"
+      },
+      {
+        "name": "Duinhir, Lord of the Blackroot Vale",
+        "rename": "Archer of Tower Hills"
+      },
+      {
+        "name": "Howdah (Great Beast)",
+        "update": {
+          "shoot": 4
+        }
+      },
+      {
+        "name": "Great Beast",
+        "update": {
+          "points": 195
+        }
+      },
+      {
+        "name": "Ranger of the North",
+        "rename": "Dunedain",
+        "append": {
+          "specialRules": ["Leader (Hobbit Archers)"]
+        }
+      },
+      {
+        "name": "Rivendell Captain",
+        "rename": "Captain of Lindon"
+      },
+      {
+        "name": "Erestor",
+        "rename": "High Counsellor"
+      },
+      {
+        "name": "Arwen Undomiel",
+        "rename": "Andriel Lore-master"
+      },
+      {
+        "name": "Nori the Dwarf, Champion of Erebor",
+        "rename": "Farin, The unyielding rock"
+      },
+      {
+        "name": "Bofur the Dwarf, Champion of Erebor",
+        "rename": "Fundin, Iron will",
+        "append": {
+          "specialRules": ["Burly"]
+        },
+        "update": {
+          "points": 70
+        }
+      },
+      {
+        "name": "Dwarven Ballista",
+        "rename": "Iron Hills Siege Bow"
+      },
+      {
+        "name": "Mirkwood Ranger Captain",
+        "append": {
+          "wargear": ["Elven throwing weapons"]
+        },
+        "update": {
+          "fate": 1
+        }
+      },
+      {
+        "name": "Tauriel, Ranger of Mirkwood",
+        "rename": "Loriel, Eye of Mirkwood",
+        "append": {
+          "wargear": ["Elf Bow"]
+        },
+        "update": {
+          "points": 95
+        }
+      },
+      {
+        "name": "Gloin the Dwarf, Champion of Erebor",
+        "update": {
+          "fight": 5,
+          "might": 2,
+          "points": 90
+        },
+        "rename": "Hadahod, Mountain rage"
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "update": {
+          "might": 2,
+          "points": 95
+        },
+        "rename": "Durin VII, The last"
+      },
+      {
+        "name": "Mirkwood Elf Captain",
+        "append": {
+          "options": [{
+            "name": "Horse",
+            "points": 20
+          }]
+        },
+        "update": {
+          "fate": 2
+        },
+        "rename": "Arondir, Mirkwood guard"
+      },
+      {
+        "name": "Galadhrim Captain",
+        "rename": "Lorien Elf Captain",
+        "update": {
+          "points": 65
+        }
+      },
+      {
+        "name": "Lothlorien Captain",
+        "append": {
+          "specialRules": ["Sharpshooter", "Expert Shot"]
+        },
+        "update": {
+          "fate": 2,
+          "points": 75
+        },
+        "rename": "Haldin, Elf Captain"
+      },
+      {
+        "name": "Rúmil, Warden of Caras Galadhon",
+        "rename": "Lumiriel, Beast speaker",
+        "append": {
+          "options": [{
+            "name": "Mirkwood Hunting Spider mount",
+            "points": 30
+          }]
+        }
+      },
+      {
+        "name": "Dwarf Captain",
+        "rename": "Belegost Dwarf Captain"
+      },
+      {
+        "name": "King's Champion Group",
+        "rename": "Nogrod Champion Group"
+      },
+      {
+        "name": "Flói Stonehand",
+        "rename": "Gilfor, Lore-maker"
+      },
+      {
+        "name": "Malbeth the Seer",
+        "rename": "Seer of Arnor"
+      },
+      {
+        "name": "Goroth, Captain of the Morannon",
+        "rename": "Zog, Blackhammer",
+        "remove": {
+          "specialRules": ["Burly"],
+          "wargear": ["Two-handed weapon"]
+        },
+        "append": {
+          "wargear": ["Shield"]
+        },
+        "update": {
+          "defence": 7,
+          "points": 90
+        }
+      },
+      {
+        "name": "Gorbag, Orc Captain",
+        "rename": "Ratbag, Lucky Coward",
+        "append": {
+          "specialRules": ["Oblivious to Pain"]
+        },
+        "update": {
+          "might": 2
+        }
+      },
+      {
+        "name": "Gróblog",
+        "rename": "Gorkil, Goblin King"
+      },
+      {
+        "name": "Grinnah",
+        "rename": "Grinnah, The Slippery",
+        "update": {
+          "fight": 4,
+          "fate": 2,
+          "points": 55,
+          "options": [
+            {
+              "name": "Giant Scorpion (Mirwkood hunting spider w/ spear)",
+              "points": 30
+            }
+          ]
+        },
+        "append": {
+          "wargear": ["Hand-and-a-half spear"]
+        }
+      },
+      {
+        "name": "Yazneg, Hunter Orc Captain",
+        "rename": "Yagzen, Warg Master",
+        "update": {
+          "options": [
+            {
+              "name": "Fell Warg",
+						  "points": 20
+            }
+          ],
+          "requiredChildren": [
+            {
+              "name": "Fell Warg",
+              "points": 20,
+              "elementPropertyName": "options"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Narzug, Hunter Orc Captain",
+        "rename": "Karl, Crowseye",
+        "append": {
+          "wargear": ["Bow"]
+        },
+        "remove": {
+          "wargear": ["Orc Bow"],
+          "specialRules": ["Poisoned Attacks (Orc Bow)"]
+        }
+      },
+      {
+        "name": "The Shadow of Rhudaur",
+        "append": {
+          "specialRules": ["Phalanx"],
+          "magicalPowers": [
+            {
+              "name": "Enchant Blades",
+              "range": 12,
+              "casting": 5
+			  		}
+          ]
+        },
+        "update": {
+          "fight": 4
+        },
+        "rename": "Agenvar, Darkness of Rhun"
+      },
+      {
+        "name": "Easterling Dragon Knight",
+        "rename": "Mohan, Swift Fury",
+        "update": {
+          "fate": 1
+        }
+      },
+      {
+        "name": "Castellan of Dol Guldur",
+        "rename": "Araphant, Shadow of Arthedain",
+        "update": {
+          "defence": 7
+        }
+      },
+      {
+        "name": "The Mouth of Sauron",
+        "rename": "Herumor, Terror of the Seas"
+      },
+      {
+        "name": "Suladan, The Serpent Lord",
+        "update": {
+          "attacks": 2,
+          "wounds": 2,
+          "might": 2,
+          "will": 2,
+          "fate": 2,
+          "points": 90,
+          "options": [
+            {
+            "name": "Horse",
+            "points": 20
+            }
+          ]
+        },
+        "rename": "Aldamir, Black Flag"
+      }
     ],
-    "warriors":[
-
+    "warriors": [
+      {
+        "name": "Guard of the Fountain Court",
+        "update": {
+          "fight": 5,
+          "points": 11
+        },
+        "rename": "Gondor Honour Guard"
+      },
+      {
+        "name": "Warrior of Numenor",
+        "rename": "Warrior of Gondor"
+      },
+      {
+        "name": "Ranger of Gondor",
+        "append": {
+          "wargear": [
+            "Longbow"
+          ]
+        },
+        "remove": {
+          "wargear": [
+            "Bow"
+          ]
+        }
+      },
+      {
+        "name": "Knight of Gondor",
+        "update": {
+          "fight": 5,
+          "points": 12
+        },
+        "append": {
+          "requiredChildren": [
+            {
+              "elementPropertyName": "options",
+              "name": "Armoured horse and lance",
+              "points": 9
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lake-town Militia",
+        "rename": "Warrior of Laketown",
+        "append": {
+          "wargear": [
+            "Armour"
+          ]
+        },
+        "update": {
+          "points": 6
+        }
+      },
+      {
+        "name": "Fell beast",
+        "update": {
+          "points": 75,
+          "options": [
+            {
+            "name": "Armour",
+            "points": 10
+            }
+          ]
+        },
+        "append": {
+          "factions": [
+            "Umbar"
+          ],
+          "unitType": [
+            "Elite"
+          ]
+        },
+        "remove": {
+          "specialRules": [
+            "Feral"
+          ],
+          "unitType": [
+            "Mount"
+          ]
+        },
+        "delete": [
+          "type"
+        ]
+      },
+      {
+        "name": "Clansman of Lamedon",
+        "rename": "Axeman of Eriador",
+        "append": {
+          "wargear": ["Axe of Lossarnach"]
+        },
+        "remove": {
+          "wargear": ["Two-handed weapon"]
+        }
+      },
+      {
+        "name": "Blackroot Vale Archer",
+        "rename": "Ranger of Eriador",
+        "append": {
+          "option": [{
+            "name": "Horse",
+            "points": 5
+          }]
+        }
+      },
+      {
+        "name": "Knight of Eriador",
+        "update": {
+          "requiredChildren": [
+            {
+              "elementPropertyName": "options",
+              "name": "Armoured horse and lance",
+              "points": 9
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rivendell Knight",
+        "rename": "Knight of Lindon"
+      },
+      {
+        "name": "Palace Guard",
+        "rename": "Exalted Lindon Warrior"
+      },
+      {
+        "name": "Grim Hammer Warrior",
+        "append": {
+          "specialRules": ["Guardian of the King"]
+        },
+        "update": {
+          "points": 12
+        }
+      },
+      {
+        "name": "Erebor Goat Rider",
+        "remove": {
+          "wargear": ["War spear"]
+        },
+        "update": {
+          "strength": 3,
+          "points": 17,
+          "options":[]
+        }
+      },
+      {
+        "name": "Iron Hills Goat Rider"
+      },
+      {
+        "name": "Mirkwood Ranger",
+        "append": {
+          "wargear": ["Elven throwing weapons"]
+        }
+      },
+      {
+        "name": "Wood Elf Sentinel",
+        "rename": "Lorien Sentinel"
+      },
+      {
+        "name": "Lothlorien Warrior",
+        "rename": "Lorien Warrior"
+      },
+      {
+        "name": "Galadhrim Warrior",
+        "append": {
+          "specialRules": ["Caras Galadhon Fighting Style"],
+          "wargear": ["Pike"]
+        }
+      },
+      {
+        "name": "Iron Guard",
+        "append": {
+          "option": [{
+            "name": "Exchange throwing weapon for flaming brand",
+            "points": 0
+          }]
+        }
+      },
+      {
+        "name": "Ent",
+        "rename": "Iron Golem"
+      },
+      {
+        "name": "Dwarf Warrior",
+        "rename": "Belegost Dwarf Warrior"
+      },
+      {
+        "name": "Dwarf Ranger",
+        "rename": "Nogrod Dwarf Ranger"
+      },
+      {
+        "name": "Ranger of the North",
+        "update": {
+          "points": 30,
+          "fight": 5,
+          "defence": 5
+        },
+        "append": {
+          "options": [{
+            "name": "Horse",
+            "points": 20
+          }]
+        }
+      },
+      {
+        "name": "Warrior of Arnor",
+        "append": {
+          "specialRules": ["Ancient Enemies (Angmar)"]
+        }
+      },
+      {
+        "name": "Morgul Stalker",
+        "update": {
+          "shoot": 4
+        }
+      },
+      {
+        "name": "Moria Blackshield Warrior",
+        "update": {
+          "fight": 4
+        }
+      },
+      {
+        "name": "Warg Marauder",
+        "update": {
+          "points": 30
+        }
+      },
+      {
+        "name": "Moria Goblin Prowler",
+        "append": {
+          "wargear": ["Anduril, Flame of the West"]
+        }
+      },
+      {
+        "name": "Isengard Warg Rider",
+        "append": {
+          "options": [{
+            "name": "Orc Bow (4+ Shoot)",
+            "points": 2
+          }]
+        }
+      },
+      {
+        "name": "Black Numenorean Warrior",
+        "append": {
+          "options": [
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Bow",
+              "points": 1
+            }
+        ]
+        }
+      }
     ]
   }
 }
