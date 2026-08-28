@@ -7541,8 +7541,7 @@
                     },
                     {
                         "name": "Shield",
-                        "points": 1,
-                        "chooseOneKey": "a"
+                        "points": 1
                     },
                     {
                         "name": "Uruk-Hai Bow",
@@ -9889,23 +9888,19 @@
                 "options": [
                     {
                         "name": "Shield & throwing spears",
-                        "points": 2,
-                        "requireChooseOneKey": "a"
+                        "points": 2
                     },
                     {
                         "name": "Orc bow",
-                        "points": 1,
-                        "requireChooseOneKey": "a"
+                        "points": 1
                     },
                     {
                         "name": "Shield",
-                        "points": 1,
-                        "requireChooseOneKey": "a"
+                        "points": 1
                     },
                     {
                         "name": "Throwing spears",
-                        "points": 1,
-                        "requireChooseOneKey": "a"
+                        "points": 1
                     },
                     {
                         "name": "Orc Bow (4+ Shoot)",
