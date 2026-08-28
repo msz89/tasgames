@@ -258,6 +258,7 @@ def add_warriors(datafile, profiles_to_add, warrior_index):
         copied_warrior = warrior_index[original_name].copy()
         copied_warrior["name"] = output_name
         copied_warrior["factions"] = []
+        remove_option_enforcement(warrior=copied_warrior)
         datafile["data"]["warriors"].append(copied_warrior)
     return True
 
@@ -470,7 +471,7 @@ def customise_profiles(output, conf):
     Customisations are applied in order: append, remove, update, rename.
     Rename is done last to ensure other operations reference the original name.
     """
-    for level in ['heroes', 'warriors']:
+    for level in ['heroes', 'warriors','gear']:
         if 'customisations' not in conf or level not in conf['customisations']:
             continue
         
@@ -485,7 +486,7 @@ def customise_profiles(output, conf):
         for custom in customisations:
             obj_name = custom.get("name")
             obj = lookup.get(obj_name)
-            
+
             if obj is None:
                 continue
             
@@ -544,7 +545,12 @@ def customise_profiles(output, conf):
     
     return True
 
-
+def remove_option_enforcement(warrior):
+    remove_tags = ["requireChooseOneKey","chooseOnekey","chooseOneKey"] 
+    for option in  warrior.get("options"):
+        for tag in remove_tags:
+            if tag in option:
+                del option[tag]
 
 
 def transplant_profiles(src, output, conf):
@@ -556,24 +562,43 @@ def transplant_profiles(src, output, conf):
             profile_name = profile.get("name")
             from_section = profile.get("fromSection")
             to_section = profile.get("toSection")
+            rename = profile.get("rename")
 
             if from_section == "gear":
                 _index = build_gear_index(src)
+                copy_object = _index.get(profile_name).copy()
+                if "rename":
+                    copy_object['name'] = rename
                 output["data"].setdefault(to_section,[]).append(_index.get(profile_name))
                 #case sensitive
 
             elif from_section == "heroes":
                 _index = build_gear_index(src)
+                copy_object = _index.get(profile_name).copy()
+                if "rename":
+                    copy_object['name'] = rename
                 output["data"].setdefault(to_section,[]).append(_index.get(profile_name))
 
             elif from_section == "warriors":
                 _index = build_warrior_index(src)
-                output["data"].setdefault(to_section,[]).append(_index.get(profile_name))
+                copy_object = _index.get(profile_name).copy()
+                if "rename":
+                    copy_object['name'] = rename
+                output["data"].setdefault(to_section,[]).append(copy_object)
 
             else:
                 raise Exception(f"Transplant is not configured to source from for {from_section}")
             
     return True
+
+def insert_objects(output, conf):
+    """
+    inserts custom objects from the conf
+    """
+    for obj in conf.get("customisations").get("insertObjects"):
+        destination = obj.get("destination")
+        output["data"][destination].extend(obj.get("objects"))
+
 
 def build_custom_factions_file(source_file, config_file, output_file):
     conf = load_config(config_file)
@@ -654,6 +679,7 @@ def build_custom_factions_file(source_file, config_file, output_file):
     attach_factions_with_mapping(output, conf, hero_faction_mapping, warrior_faction_mapping)
     transplant_profiles(src=src, output=output, conf=conf)
     customise_profiles(output=output, conf=conf)
+    insert_objects(output=output, conf=conf)
 
     save_output(output, output_file)
 

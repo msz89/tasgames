@@ -616,9 +616,39 @@
         "name": "Fell beast",
         "fromSection": "gear",
         "toSection": "warriors"
+      },
+      {
+        "name": "Mirkwood Hunting Spider",
+        "fromSection": "warriors",
+        "toSection": "gear",
+        "rename": "Mirkwood Hunting Spider (Mount)"
+      },
+      {
+        "name": "Mirkwood Hunting Spider",
+        "fromSection": "warriors",
+        "toSection": "gear",
+        "rename": "Giant Scorpion (Mount)"
       }
     ],
-    "appendData":{
+    "insertObjects":[
+      {
+        "destination": "gear",
+        "objects":[
+          {
+            "name": "Orc Bow (4+ Shoot)",
+            "type": "Bow",
+            "definition": "18\" Range, 2 Strength",
+            "modifiesStats": [
+              {
+                  "stat": "shoot",
+                  "modifier": 1
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "appendData": {
       "tag":"unitType",
       "value":"Elite",
       "heroes": [
@@ -660,7 +690,26 @@
         "Werewolf",
         "Corsair Crossbowman"
       ]
-    },
+    }, 
+    "gear": [
+      {
+        "name": "Mirkwood Hunting Spider (Mount)",
+        "update": {
+          "unitType": ["Beast","Mount"],
+          "type": "mount"
+        }
+      },
+      {
+        "name": "Giant Scorpion (Mount)",
+        "update": {
+          "unitType": ["Beast","Mount"],
+          "type": "mount"
+        },
+        "append":{
+          "wargear": ["Spear"]
+        }
+      }
+    ],
     "heroes": [
       {
         "name": "Knight of the White Tower",
@@ -910,7 +959,7 @@
         "rename": "Lumiriel, Beast speaker",
         "append": {
           "options": [{
-            "name": "Mirkwood Hunting Spider mount",
+            "name": "Mirkwood Hunting Spider (Mount)",
             "points": 30
           }]
         }
@@ -969,7 +1018,7 @@
           "points": 55,
           "options": [
             {
-              "name": "Giant Scorpion (Mirwkood hunting spider w/ spear)",
+              "name": "Giant Scorpion (Mount)",
               "points": 30
             }
           ]
