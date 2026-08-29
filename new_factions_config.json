@@ -798,17 +798,6 @@
         "rename": "Iron Hills Siege Bow"
       },
       {
-        "name": "Mirkwood Ranger Captain",
-        "append": {
-          "wargear": [
-            "Elven throwing weapons"
-          ]
-        },
-        "update": {
-          "fate": 1
-        }
-      },
-      {
         "name": "Tauriel, Ranger of Mirkwood",
         "rename": "Loriel, Eye of Mirkwood",
         "append": {
@@ -834,13 +823,6 @@
           "fate": 2
         },
         "rename": "Arondir, Mirkwood guard"
-      },
-      {
-        "name": "Galadhrim Captain",
-        "rename": "Lorien Elf Captain",
-        "update": {
-          "points": 65
-        }
       },
       {
         "name": "Lothlorien Captain",
@@ -873,33 +855,8 @@
         "rename": "Belegost Dwarf Captain"
       },
       {
-        "name": "King's Champion Group",
-        "rename": "Nogrod Champion Group"
-      },
-      {
         "name": "Flói Stonehand",
         "rename": "Gilfor, Lore-maker"
-      },
-      {
-        "name": "Goroth, Captain of the Morannon",
-        "rename": "Zog, Blackhammer",
-        "remove": {
-          "specialRules": [
-            "Burly"
-          ],
-          "wargear": [
-            "Two-handed weapon"
-          ]
-        },
-        "append": {
-          "wargear": [
-            "Shield"
-          ]
-        },
-        "update": {
-          "defence": 7,
-          "points": 90
-        }
       },
       {
         "name": "Gorbag, Orc Captain",
@@ -1007,10 +964,6 @@
         }
       },
       {
-        "name": "The Mouth of Sauron",
-        "rename": "Herumor, Terror of the Seas"
-      },
-      {
         "name": "Suladan, The Serpent Lord",
         "update": {
           "attacks": 2,
@@ -1048,18 +1001,6 @@
           "points": 95
         },
         "rename": "Durin VII, The Last"
-      },
-      {
-        "name": "Bofur the Dwarf, Champion of Erebor",
-        "append": {
-          "specialRules": [
-            "Burly"
-          ]
-        },
-        "update": {
-          "points": 70
-        },
-        "rename": "Fundin, Iron Will"
       },
       {
         "name": "Duinhir, Lord of the Blackroot Vale",
@@ -1211,6 +1152,92 @@
           ]
         },
         "rename": "Dafri, Protector of Dale"
+      },
+      {
+        "name": "Bofur the Dwarf, Champion of Erebor",
+        "append": {
+          "specialRules": [
+            "Burly"
+          ]
+        },
+        "update": {
+          "points": 70,
+          "options": [
+            {
+              "name": "War goat",
+              "points": 20
+            }
+          ]
+        },
+        "rename": "Fundin, Iron Will"
+      },
+      {
+        "name": "Mirkwood Ranger Captain",
+        "append": {
+          "wargear": [
+            "Elven throwing weapons"
+          ]
+        },
+        "update": {
+          "fate": 2
+        }
+      },
+      {
+        "name": "Galadhrim Captain",
+        "update": {
+          "points": 65,
+          "options": [
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Elf Bow",
+              "points": 5
+            }
+          ]
+        },
+        "rename": "Lorien Elf Captain"
+      },
+      {
+        "name": "King's Champion Group",
+        "rename": "Nogrod Battle Brothers"
+      },
+      {
+        "name": "Goroth, Captain of the Morannon",
+        "append": {
+          "wargear": [
+            "Shield",
+            "Hand-and-a-half weapon"
+          ]
+        },
+        "remove": {
+          "specialRules": [
+            "Burly"
+          ],
+          "wargear": [
+            "Two-handed weapon"
+          ]
+        },
+        "update": {
+          "defence": 7,
+          "points": 90,
+          "options": []
+        },
+        "rename": "Zog, Blackhammer"
+      },
+      {
+        "name": "The Mouth of Sauron",
+        "rename": "Herumor, Terror of the Seas",
+        "append": {
+          "magicalPowers": [
+            {
+              "name": "Call Winds",
+              "range": 12,
+              "casting": 3
+            }
+          ]
+        }
       }
     ],
     "warriors": [
@@ -1296,21 +1323,6 @@
         "rename": "Lorien Sentinel"
       },
       {
-        "name": "Lothlorien Warrior",
-        "rename": "Lorien Warrior"
-      },
-      {
-        "name": "Galadhrim Warrior",
-        "append": {
-          "specialRules": [
-            "Caras Galadhon Fighting Style"
-          ],
-          "wargear": [
-            "Pike"
-          ]
-        }
-      },
-      {
         "name": "Iron Guard",
         "append": {
           "options": [
@@ -1324,14 +1336,6 @@
       {
         "name": "Ent",
         "rename": "Iron Golem"
-      },
-      {
-        "name": "Dwarf Warrior",
-        "rename": "Belegost Dwarf Warrior"
-      },
-      {
-        "name": "Dwarf Ranger",
-        "rename": "Nogrod Dwarf Ranger"
       },
       {
         "name": "Ranger of the North",
@@ -1385,25 +1389,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "Black Numenorean Warrior",
-        "append": {
-          "options": [
-            {
-              "name": "Spear",
-              "points": 1
-            },
-            {
-              "name": "Bow",
-              "points": 1
-            }
-          ]
-        }
-      },
-      {
-        "name": "Rivendell Warrior",
-        "rename": "Warrior of Lindon"
       },
       {
         "name": "Lake-town Militia",
@@ -1509,17 +1494,6 @@
         "update": {
           "points": 12,
           "strength": 4
-        }
-      },
-      {
-        "name": "Erebor Dwarf Warrior",
-        "append": {
-          "options": [
-            {
-              "name": "Banner",
-              "points": 25
-            }
-          ]
         }
       },
       {
@@ -1663,6 +1637,49 @@
         }
       },
       {
+        "name": "Rivendell Warrior",
+        "rename": "Warrior of Lindon",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Elf Bow",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Erebor Dwarf Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
         "name": "Erebor Goat Rider",
         "update": {
           "strength": 3,
@@ -1679,6 +1696,425 @@
             {
               "name": "War spear",
               "points": 1
+            }
+          ],
+          "wargear": [
+            {
+              "name": "Heavy Armour"
+            },
+            {
+              "name": "Hand Weapon"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Iron Hills Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Mattock",
+              "points": 1
+            },
+            {
+              "name": "Crossbow",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Mirkwood Elf Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Elven Glaive",
+              "points": 2
+            },
+            {
+              "name": "Elf Bow",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lothlorien Warrior",
+        "rename": "Lorien Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Wood Elf spear",
+              "points": 1
+            },
+            {
+              "name": "Elven throwing weapons",
+              "points": 2
+            },
+            {
+              "name": "Elf Bow",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Galadhrim Warrior",
+        "append": {
+          "specialRules": [
+            "Caras Galadhon Fighting Style"
+          ],
+          "wargear": [
+            "Pike"
+          ]
+        },
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Pike",
+              "points": 1
+            },
+            {
+              "name": "Elf Bow",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Galadhrim Knight",
+        "update": {
+          "options": [
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Elf Bow",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dwarf Warrior",
+        "rename": "Belegost Dwarf Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Dwarf Bow",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dwarf Ranger",
+        "rename": "Nogrod Dwarf Ranger"
+      },
+      {
+        "name": "Mordor Troll",
+        "append": {
+          "options": [
+            {
+              "name": "Warhorn",
+              "points": 25
+            }
+          ]
+        }
+      },
+      {
+        "name": "Morannon Orc Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Black Numenorean Knight",
+        "remove": {
+          "options": [
+            {
+              "name": "Exchange lance for war horn",
+              "points": 25
+            }
+          ]
+        }
+      },
+      {
+        "name": "Goblin Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Orc Bow",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Uruk-hai Berserker",
+        "rename": "Isengard Beserker"
+      },
+      {
+        "name": "Uruk-hai Scout",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Pike",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            },
+            {
+              "name": "Uruk-Hai Bow",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Wild Man of Dunland",
+        "update": {
+          "options": [
+            {
+              "name": "Light shield",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Bow",
+              "points": 1
+            },
+            {
+              "name": "Flaming Brand",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Easterling Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Easterling Halberd",
+              "points": 1
+            },
+            {
+              "name": "Bow",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Easterling Kataphrakt",
+        "update": {
+          "options": [
+            {
+              "name": "Exchange shield for war drum (Easterling)",
+              "points": 25
+            }
+          ]
+        }
+      },
+      {
+        "name": "Angmar Orc Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Two-handed weapon",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Orc Bow",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Warrior of Carn Dum",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Heavy armour",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Hunter Orc Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Fell Warg",
+              "points": 7
+            },
+            {
+              "name": "Orc Bow",
+              "points": 1
+            },
+            {
+              "name": "Two-Handed weapon",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Black Numenorean Warrior",
+        "append": {
+          "options": [
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Bow",
+              "points": 1
+            }
+          ]
+        },
+        "update": {
+          "options": [
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Bow",
+              "points": 1
+            },
+            {
+              "name": "Banner",
+              "points": 25
+            }
+          ]
+        }
+      },
+      {
+        "name": "Corsair of Umbar",
+        "update": {
+          "options": [
+            {
+              "name": "Light shield",
+              "points": 1
+            },
+            {
+              "name": "Throwing weapons",
+              "points": 1
+            },
+            {
+              "name": "Bow",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 25
             }
           ]
         }

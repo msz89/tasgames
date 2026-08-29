@@ -194,10 +194,13 @@ with hero_col:
 with warrior_col:
     st.subheader("Warriors")
     if selected_faction.get("warriors"):
-        for index, warrior_name in enumerate(selected_faction.get("warriors", [])):
+        for index, warrior in enumerate(selected_faction.get("warriors", [])):
             col_left, col_right = st.columns([4, 1])
             with col_left:
-                st.write(warrior_name)
+                warrior_display_name = warrior.get("duplicateAs") if isinstance(warrior, dict) else warrior
+                if warrior_display_name is None:
+                    warrior_display_name = warrior.get("name") if isinstance(warrior, dict) else warrior
+                st.write(warrior_display_name)
             with col_right:
                 if st.button("Remove", key=f"remove_warrior_{selected_faction['name']}_{index}"):
                     del selected_faction["warriors"][index]
@@ -215,10 +218,27 @@ with warrior_col:
 
     if filtered_warriors:
         selected_warrior_name = st.selectbox("Choose warrior", filtered_warriors, key=f"selected_warrior_{selected_faction['name']}")
+        warrior_rename = st.text_input(
+            "Rename warrior (optional)",
+            key=f"warrior_rename_{selected_faction['name']}",
+            placeholder="Leave blank to keep the original name",
+        )
         if st.button("Add warrior", key=f"add_warrior_button_{selected_faction['name']}", disabled=False):
-            if selected_warrior_name not in selected_faction.get("warriors", []):
-                selected_faction.setdefault("warriors", []).append(selected_warrior_name)
-                st.success(f"Added {selected_warrior_name}")
+            existing_warrior_names = [
+                warrior.get("name") if isinstance(warrior, dict) else warrior
+                for warrior in selected_faction.get("warriors", [])
+            ]
+            if selected_warrior_name not in existing_warrior_names:
+                clean_rename = warrior_rename.strip() if warrior_rename else ""
+                if clean_rename:
+                    selected_faction.setdefault("warriors", []).append({
+                        "name": selected_warrior_name,
+                        "duplicateAs": clean_rename,
+                    })
+                    st.success(f"Added {selected_warrior_name} as {clean_rename}")
+                else:
+                    selected_faction.setdefault("warriors", []).append(selected_warrior_name)
+                    st.success(f"Added {selected_warrior_name}")
                 st.rerun()
             else:
                 st.warning(f"{selected_warrior_name} is already in this faction")

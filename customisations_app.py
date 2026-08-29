@@ -146,6 +146,76 @@ def rows_to_customisation(profile_name: str, rows: list[dict[str, Any]]) -> dict
     return customisation
 
 
+LIST_FIELD_OPTIONS = ["options", "wargear", "specialRules"]
+
+
+def list_builder_columns(field_name: str) -> list[str]:
+    if field_name == "specialRules":
+        return ["name", "description"]
+    return ["name", "points"]
+
+
+def materialise_list_row(row: dict[str, Any], field_name: str) -> dict[str, Any] | None:
+    item_name = str(row.get("name", "")).strip()
+    if not item_name:
+        return None
+
+    item: dict[str, Any] = {"name": item_name}
+
+    if field_name != "specialRules":
+        points_value = row.get("points")
+        if points_value not in (None, ""):
+            try:
+                item["points"] = int(points_value)
+            except (TypeError, ValueError):
+                try:
+                    item["points"] = float(points_value)
+                except (TypeError, ValueError):
+                    item["points"] = str(points_value).strip()
+
+    description = str(row.get("description", "")).strip()
+    if description:
+        item["description"] = description
+
+    return item
+
+
+def build_list_customisation_value(field_name: str, rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    items: list[dict[str, Any]] = []
+    for row in rows:
+        item = materialise_list_row(row, field_name)
+        if item is not None:
+            items.append(item)
+    return items
+
+
+def profile_equipment_rows(profile: dict[str, Any] | None) -> list[dict[str, Any]]:
+    if not isinstance(profile, dict):
+        return []
+
+    rows: list[dict[str, Any]] = []
+
+    for item in profile.get("wargear", []):
+        if isinstance(item, dict):
+            name = item.get("name") or item.get("text") or ""
+        else:
+            name = str(item)
+        if name:
+            rows.append({"Name": name, "Points": None})
+
+    for item in profile.get("options", []):
+        if isinstance(item, dict):
+            name = item.get("name") or item.get("text") or ""
+            points = item.get("points")
+        else:
+            name = str(item)
+            points = None
+        if name:
+            rows.append({"Name": name, "Points": points})
+
+    return rows
+
+
 def ensure_state() -> None:
     if "customisation_config" not in st.session_state:
         st.session_state.customisation_config = load_json(CONFIG_PATH)
@@ -174,12 +244,12 @@ selected_faction = next(
 
 st.title("Legions customisation editor")
 
-st.subheader("1. Select unit type")
+# st.subheader("1. Select unit type")
 level_label = st.selectbox("Unit type", ["Heroes", "Warriors"])
 level = level_label.lower()
 level_customisations = customisations.setdefault(level, [])
 
-st.subheader("2. Select profile")
+# st.subheader("2. Select profile")
 profile_names = faction_profiles(selected_faction, level)
 if not profile_names:
     st.warning(f"No {level} profiles found in this faction.")
@@ -188,7 +258,71 @@ if not profile_names:
 selected_profile = st.selectbox("Profile", profile_names)
 existing = find_customisation(level_customisations, selected_profile)
 
-st.subheader("3. Add customisation")
+# st.subheader("3. Add customisation")
+
+quick_list_field = st.selectbox(
+    "Quick list field",
+    ["-- manual JSON --", *LIST_FIELD_OPTIONS],
+    index=0,
+    key=f"quick_list_field_{level}_{selected_profile}",
+)
+quick_list_action = st.selectbox(
+    "Quick list action",
+    ["update", "append", "remove"],
+    index=0,
+    key=f"quick_list_action_{level}_{selected_profile}",
+)
+
+quick_list_rows: list[dict[str, Any]] = []
+if quick_list_field != "-- manual JSON --":
+    field_columns = list_builder_columns(quick_list_field)
+    current_items: list[dict[str, Any]] = []
+
+    for custom in level_customisations:
+        if custom.get("name") != selected_profile:
+            continue
+        for action_name in ("update", "append"):
+            payload = custom.get(action_name, {})
+            if not isinstance(payload, dict):
+                continue
+            for item in payload.get(quick_list_field, []):
+                if isinstance(item, dict):
+                    current_items.append(item)
+
+    if quick_list_action == "remove":
+        remove_names = sorted({item.get("name") for item in current_items if isinstance(item, dict) and item.get("name")})
+        selected_remove_names = st.multiselect(
+            f"Remove from {quick_list_field}",
+            remove_names,
+            key=f"quick_remove_{level}_{selected_profile}_{quick_list_field}",
+        )
+        quick_list_rows = [{"name": name} for name in selected_remove_names]
+    else:
+        default_rows = []
+        if current_items:
+            default_rows = [
+                {column: item.get(column, "") for column in field_columns if column in item}
+                for item in current_items
+            ]
+        else:
+            default_rows = [{column: "" for column in field_columns}]
+
+        quick_list_rows = st.data_editor(
+            default_rows,
+            num_rows="dynamic",
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "name": st.column_config.TextColumn("Name", required=True),
+                "points": st.column_config.NumberColumn("Points", min_value=0, step=1),
+                "description": st.column_config.TextColumn("Description"),
+            },
+            key=f"quick_list_editor_{level}_{selected_profile}_{quick_list_field}",
+        )
+
+    if quick_list_rows:
+        st.caption(f"Generated JSON: {json.dumps(build_list_customisation_value(quick_list_field, quick_list_rows), ensure_ascii=False)}")
+
 st.caption("Enter text or numbers directly, or use JSON for lists and objects, for example `Shield`, `60`, `[\"Bow\"]`, or `{\"points\": 60}`.")
 
 rows = customisation_rows(existing)
@@ -207,15 +341,29 @@ edited_rows = st.data_editor(
     key=f"customisation_rows_{level}_{selected_profile}",
 )
 
+profile_name = source_profile_name(selected_faction, level, selected_profile)
 profile_points = find_profile_points(
     st.session_state.mesbg_profile_data,
     level,
-    source_profile_name(selected_faction, level, selected_profile),
+    profile_name,
 )
 if profile_points is None:
     st.caption("LOL27 points: not available")
 else:
     st.caption(f"LOL27 points: {profile_points}")
+
+source_profile = next(
+    (
+        profile
+        for profile in st.session_state.mesbg_profile_data.get("data", {}).get(level, [])
+        if profile.get("name") == profile_name
+    ),
+    None,
+)
+profile_equipment = profile_equipment_rows(source_profile)
+if profile_equipment:
+    st.caption("Wargear and options")
+    st.table(profile_equipment)
 
 for row in edited_rows:
     if row.get("action") == "rename":
@@ -224,6 +372,15 @@ for row in edited_rows:
 if st.button("Save customisation", type="primary"):
     try:
         updated = rows_to_customisation(selected_profile, edited_rows)
+        if quick_list_field != "-- manual JSON --":
+            if quick_list_action == "remove":
+                selected_names = [row.get("name") for row in quick_list_rows if isinstance(row, dict) and row.get("name")]
+                if selected_names:
+                    updated.setdefault("remove", {})[quick_list_field] = selected_names
+            elif quick_list_action in {"update", "append"}:
+                list_value = build_list_customisation_value(quick_list_field, quick_list_rows)
+                if list_value or quick_list_action == "update":
+                    updated.setdefault(quick_list_action, {})[quick_list_field] = list_value
     except (TypeError, ValueError, json.JSONDecodeError) as error:
         st.error(str(error))
     else:
