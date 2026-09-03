@@ -649,6 +649,16 @@
     ],
     "insertObjects": [
       {
+        "destination": "keywords",
+        "objects": [
+          {
+            "name": "Pride of Eriador",
+            "definition": "Whilst within 3\" of Prince Imrahil, this model gains a bonus of +1 to their Fight Value.",
+            "tag": "Active"
+          }
+        ]
+      },
+      {
         "destination": "gear",
         "objects": [
           {
@@ -2224,24 +2234,6 @@
         }
       },
       {
-        "name": "Knight of Eriador",
-        "append": {
-          "wargear": [
-            "Horse",
-            "Lance"
-          ]
-        },
-        "update": {
-          "options": [
-            {
-              "name": "Exchange Shield and Lance for Banner",
-              "points": 23
-            }
-          ],
-          "points": 20
-        }
-      },
-      {
         "name": "Mahûd Raider",
         "append": {
           "specialRules": [
@@ -2278,6 +2270,27 @@
         "name": "Hobbit Archer",
         "update": {
           "options": []
+        }
+      },
+      {
+        "name": "Knight of Eriador",
+        "append": {
+          "wargear": [
+            "Horse",
+            "Lance"
+          ]
+        },
+        "update": {
+          "options": [
+            {
+              "name": "Exchange Shield and Lance for Banner",
+              "points": 23
+            }
+          ],
+          "points": 20,
+          "specialRules": [
+            "Pride of Eriador"
+          ]
         }
       }
     ]

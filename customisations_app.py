@@ -201,7 +201,7 @@ def profile_equipment_rows(profile: dict[str, Any] | None) -> list[dict[str, Any
         else:
             name = str(item)
         if name:
-            rows.append({"Name": name, "Points": None})
+            rows.append({"Name": name, "Points": "Wargear"})
 
     for item in profile.get("options", []):
         if isinstance(item, dict):
@@ -212,6 +212,14 @@ def profile_equipment_rows(profile: dict[str, Any] | None) -> list[dict[str, Any
             points = None
         if name:
             rows.append({"Name": name, "Points": points})
+            
+    for item in profile.get("specialRules", []):
+        if isinstance(item, dict):
+            name = item.get("name") or item.get("text") or ""
+        else:
+            name = str(item)
+        if name:
+            rows.append({"Name": name, "Points": "Special Rule"})
 
     return rows
 
@@ -362,7 +370,7 @@ source_profile = next(
 )
 profile_equipment = profile_equipment_rows(source_profile)
 if profile_equipment:
-    st.caption("Wargear and options")
+    st.caption("Wargear, options and special rules")
     st.table(profile_equipment)
 
 for row in edited_rows:
