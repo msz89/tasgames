@@ -746,21 +746,6 @@
         "rename": "Captain of Gondor"
       },
       {
-        "name": "Brorgir the Conjurer",
-        "rename": "Wizard's Apprentice",
-        "update": {
-          "defence": 5
-        },
-        "append": {
-          "gear": [
-            "Spear"
-          ],
-          "specialRules": [
-            "Poisoned Attacks"
-          ]
-        }
-      },
-      {
         "name": "Black Númenórean Marshal",
         "rename": "Southern Crusader",
         "update": {
@@ -1308,8 +1293,29 @@
         "rename": "Robin of the Tower Hills"
       },
       {
+        "name": "Brorgir the Conjurer",
+        "update": {
+          "wargear": [
+            "Heavy Armour",
+            "Spear"
+          ],
+          "defence": 5
+        },
+        "append": {
+          "specialRules": [
+            "Poisoned Attacks"
+          ]
+        },
+        "rename": "Jafar, Wizard's Apprentice"
+      },
+      {
         "name": "Mahûd Tribesmaster",
-        "rename": "Aladdin, Southern Crusader"
+        "rename": "Aladdin, Southern Crusader",
+        "append": {
+          "unitType": [
+            "Unique"
+          ]
+        }
       }
     ],
     "warriors": [
@@ -1473,14 +1479,6 @@
         "remove": {
           "wargear": [
             "Light armour"
-          ]
-        }
-      },
-      {
-        "name": "Hobbit Archer",
-        "append": {
-          "availableIn": [
-            "Ranger of the North"
           ]
         }
       },
@@ -2244,28 +2242,42 @@
         }
       },
       {
-        "name": "Abrakhan Merchant Guard",
-        "append": {
-          "options": [
-            {
-              "name": "shield",
-              "points": 1
-            }
-          ]
-        },
-        "rename": "Sultan's Guard",
-        "update": {
-          "wargear": [
-            "Hand-and-a-half weapon"
-          ]
-        }
-      },
-      {
         "name": "Mahûd Raider",
         "append": {
           "specialRules": [
             "Supreme Agility"
           ]
+        }
+      },
+      {
+        "name": "Watcher of Kârna",
+        "append": {
+          "specialRules": [
+            "Supreme Agility"
+          ]
+        }
+      },
+      {
+        "name": "Abrakhan Merchant Guard",
+        "append": {
+          "options": [
+            {
+              "name": "Shield",
+              "points": 1
+            }
+          ]
+        },
+        "update": {
+          "wargear": [
+            "Hand-and-a-half weapon"
+          ]
+        },
+        "rename": "Sultan's Guard"
+      },
+      {
+        "name": "Hobbit Archer",
+        "update": {
+          "options": []
         }
       }
     ]
