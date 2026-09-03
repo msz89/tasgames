@@ -13,6 +13,7 @@
       }
     ],
     "usePrimarySecondaryAllianceLevels": "true",
+    "disallowMultipleFactions": "False",
     "allianceTerms": {
       "primary": "Legendary",
       "secondary": "Broken",
@@ -75,11 +76,11 @@
         "Guard of the Fountain Court",
         "Warrior of Numenor",
         "Ranger of Gondor",
+        "Minas Tirith Siege Crew",
         {
-          "name": "Knight of Dol Amroth",
+          "name": "Knight of Minas Tirith",
           "duplicateAs": "Knight of Gondor"
-        },
-        "Minas Tirith Siege Crew"
+        }
       ]
     },
     {
@@ -178,7 +179,10 @@
           "duplicateAs": "Warrior of Arnor"
         },
         "Ranger of Arnor",
-        "Citadel Guard"
+        {
+          "name": "Uruk-hai Warrior",
+          "duplicateAs": "Protector of the White Mountain"
+        }
       ]
     },
     {
@@ -213,14 +217,15 @@
           "heroicTier": "Minor Hero"
         },
         {
-          "name": "Mahûd King",
+          "name": "Mahûd Tribesmaster",
           "heroicTier": "Hero of Fortitude"
         }
       ],
       "warriors": [
         "Watcher of Kârna",
         "Haradrim Warrior",
-        "Abrakhan Merchant Guard"
+        "Abrakhan Merchant Guard",
+        "Mahûd Raider"
       ]
     },
     {
@@ -244,7 +249,7 @@
         },
         {
           "name": "Ranger of the North",
-          "heroicTier": "Independent Hero",
+          "heroicTier": "Minor Hero",
           "duplicateAs": "Dunedain"
         }
       ],
@@ -1003,10 +1008,6 @@
         "rename": "Durin VII, The Last"
       },
       {
-        "name": "Duinhir, Lord of the Blackroot Vale",
-        "rename": "Robin, Hood of the Tower Hills"
-      },
-      {
         "name": "Mahûd King",
         "rename": "Southern Crusader"
       },
@@ -1041,26 +1042,6 @@
         "rename": "Maridor, Ranger-Marshal of Ithilien"
       },
       {
-        "name": "Knight of the White Tower",
-        "remove": {
-          "wargear": [
-            "Hand weapon"
-          ]
-        },
-        "rename": "Aloris, Knight of the White Tower"
-      },
-      {
-        "name": "Olwyn, Shieldmaiden of Rohan",
-        "rename": "Orwyn, Shieldmaiden of Rohan"
-      },
-      {
-        "name": "Hama, Captain of Rohan",
-        "update": {
-          "options": "Placeholder"
-        },
-        "rename": "Rogar, Warden of Rohan"
-      },
-      {
         "name": "Anborn, Ranger of Ithilien",
         "append": {
           "wargear": [
@@ -1080,22 +1061,6 @@
         "rename": "Boran, Marksman of Dale"
       },
       {
-        "name": "Captain of Dale",
-        "update": {
-          "options": [
-            {
-              "name": "Shield",
-              "points": 5
-            },
-            {
-              "name": "Esgaroth Bow",
-              "points": 5
-            }
-          ],
-          "points": 50
-        }
-      },
-      {
         "name": "Malbeth the Seer",
         "rename": "Belath, Seer of Arnor"
       },
@@ -1111,18 +1076,6 @@
         "name": "Dunedain",
         "append": {
           "specialRules": "Leader (Hobbit Archers)"
-        }
-      },
-      {
-        "name": "Ranger of the North",
-        "update": {
-          "fight": 5,
-          "points": 30,
-          "attacks": 2,
-          "options": {
-            "name": "Spear",
-            "points": 1
-          }
         }
       },
       {
@@ -1238,13 +1191,128 @@
             }
           ]
         }
+      },
+      {
+        "name": "Knight of the White Tower",
+        "remove": {
+          "wargear": [
+            "Hand weapon"
+          ]
+        },
+        "update": {
+          "options": [
+            {
+              "name": "Horse",
+              "points": 20
+            }
+          ]
+        },
+        "rename": "Olaris, Knight of the White Tower"
+      },
+      {
+        "name": "Olwyn, Shieldmaiden of Rohan",
+        "remove": {
+          "specialRules": [
+            "Sworn Protector (Hera)"
+          ]
+        },
+        "rename": "Orwyn, Shieldmaiden of Rohan",
+        "append": {
+          "specialRules": [
+            "Sworn Protector (Rohan General)"
+          ]
+        }
+      },
+      {
+        "name": "Captain of Rohan",
+        "update": {
+          "options": [
+            {
+              "name": "Horse",
+              "points": 20
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            }
+          ]
+        }
+      },
+      {
+        "name": "Hama, Captain of Rohan",
+        "update": {
+          "options": [
+            {
+              "name": "Horse",
+              "points": 20
+            },
+            {
+              "name": "Shield",
+              "points": 5
+            }
+          ],
+          "specialRules": [
+            {
+              "name": "Doorward of Meduseld"
+            },
+            {
+              "name": "Sworn Protector (Rohan General)",
+              "description": "None"
+            },
+            {
+              "name": "Leader (Vanguard of the Westfold)",
+              "description": "None"
+            }
+          ]
+        },
+        "rename": "Rogar, Warden of Rohan"
+      },
+      {
+        "name": "Captain of Dale",
+        "update": {
+          "options": [
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Esgaroth Bow",
+              "points": 5
+            }
+          ],
+          "points": 50,
+          "wargear": [
+            "Armour",
+            "Hand weapon"
+          ],
+          "defence": 5
+        }
+      },
+      {
+        "name": "Ranger of the North",
+        "update": {
+          "fight": 5,
+          "points": 30,
+          "attacks": 2,
+          "options": [
+            {
+              "name": "Spear",
+              "points": 1
+            }
+          ],
+          "defence": 5
+        }
+      },
+      {
+        "name": "Duinhir, Lord of the Blackroot Vale",
+        "rename": "Robin of the Tower Hills"
+      },
+      {
+        "name": "Mahûd Tribesmaster",
+        "rename": "Aladdin, Southern Crusader"
       }
     ],
     "warriors": [
-      {
-        "name": "Warrior of Numenor",
-        "rename": "Warrior of Gondor"
-      },
       {
         "name": "Ranger of Gondor",
         "append": {
@@ -1433,37 +1501,6 @@
         "rename": "Ranger of Eriador"
       },
       {
-        "name": "Knight of Gondor",
-        "append": {
-          "requiredChildren": [
-            {
-              "elementPropertyName": "options",
-              "name": "Armoured horse and lance",
-              "points": 9
-            }
-          ]
-        },
-        "update": {
-          "fight": 5,
-          "points": 12
-        },
-        "remove": {
-          "specialRules": [
-            "Pride of Dol Amroth"
-          ]
-        }
-      },
-      {
-        "name": "Abrakhan Merchant Guard",
-        "append": {
-          "options": {
-            "name": "shield",
-            "points": 1
-          }
-        },
-        "rename": "Crusader Swordsman"
-      },
-      {
         "name": "Haradrim Warrior",
         "append": {
           "options": {
@@ -1494,30 +1531,6 @@
         "update": {
           "points": 12,
           "strength": 4
-        }
-      },
-      {
-        "name": "Guard of the Fountain Court",
-        "update": {
-          "fight": 5,
-          "points": 11,
-          "options": "{\"name\": \"Shield\", \"points\", 1}"
-        },
-        "rename": "Gondor Honour Guard"
-      },
-      {
-        "name": "Rohan Royal Guard",
-        "update": {
-          "options": [
-            {
-              "name": "Horse",
-              "points": 5
-            },
-            {
-              "name": "Throwing spears",
-              "points": 2
-            }
-          ]
         }
       },
       {
@@ -1592,25 +1605,6 @@
               "points": 1
             }
           ]
-        }
-      },
-      {
-        "name": "Knight of Eriador",
-        "update": {
-          "options": [
-            {
-              "name": "Exchange Shield and Lance for Banner",
-              "points": 23
-            },
-            {
-              "name": "Lance",
-              "points": 0
-            }
-          ],
-          "points": 20
-        },
-        "append": {
-          "wargear": "[\"Horse\",]"
         }
       },
       {
@@ -2116,6 +2110,161 @@
               "name": "Spear",
               "points": 25
             }
+          ]
+        }
+      },
+      {
+        "name": "Knight of Gondor!",
+        "update": {
+          "fight": 5
+        },
+        "remove": {
+          "specialRules": "[Shieldwall]"
+        }
+      },
+      {
+        "name": "Guard of the Fountain Court",
+        "update": {
+          "fight": 5,
+          "points": 11,
+          "options": [
+            {
+              "name": "Shield",
+              "points": 1
+            }
+          ]
+        },
+        "rename": "Gondor Honour Guard"
+      },
+      {
+        "name": "Warrior of Numenor",
+        "rename": "Warrior of Gondor",
+        "update": {
+          "options": [
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Long Bow",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rohan Royal Guard",
+        "update": {
+          "options": [
+            {
+              "name": "Horse",
+              "points": 5
+            },
+            {
+              "name": "Throwing spears",
+              "points": 2
+            }
+          ]
+        },
+        "rename": "Vanguard of Rohan"
+      },
+      {
+        "name": "Knight of Gondor",
+        "update": {
+          "points": 21,
+          "intelligence": 6,
+          "courage": 6,
+          "fight": 5
+        },
+        "remove": {
+          "wargear": [
+            "Horse"
+          ]
+        },
+        "append": {
+          "wargear": [
+            "Armoured horse"
+          ]
+        }
+      },
+      {
+        "name": "Ranger of Arnor",
+        "update": {
+          "options": []
+        }
+      },
+      {
+        "name": "Protector of the White Mountain",
+        "append": {
+          "specialRules": [
+            "Mountain Fighters"
+          ]
+        },
+        "update": {
+          "options": [
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Crossbow",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "Knight of Eriador",
+        "append": {
+          "wargear": [
+            "Horse",
+            "Lance"
+          ]
+        },
+        "update": {
+          "options": [
+            {
+              "name": "Exchange Shield and Lance for Banner",
+              "points": 23
+            }
+          ],
+          "points": 20
+        }
+      },
+      {
+        "name": "Abrakhan Merchant Guard",
+        "append": {
+          "options": [
+            {
+              "name": "shield",
+              "points": 1
+            }
+          ]
+        },
+        "rename": "Sultan's Guard",
+        "update": {
+          "wargear": [
+            "Hand-and-a-half weapon"
+          ]
+        }
+      },
+      {
+        "name": "Mahûd Raider",
+        "append": {
+          "specialRules": [
+            "Supreme Agility"
           ]
         }
       }
