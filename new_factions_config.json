@@ -653,7 +653,12 @@
         "objects": [
           {
             "name": "Pride of Eriador",
-            "definition": "Whilst within 3\" of Prince Imrahil, this model gains a bonus of +1 to their Fight Value.",
+            "definition": "Whilst within 3\" of an Eriador General, this model gains a bonus of +1 to their Fight Value.",
+            "tag": "Active"
+          },
+          {
+            "name": "Guardian of Lindon",
+            "definition": "Whilst within 3\" of a Lindon General, this model gains a bonus of +1 to their Fight Value.",
             "tag": "Active"
           }
         ]
@@ -676,6 +681,11 @@
             "name": "Exchange throwing weapon for flaming brand",
             "tag": "Passive",
             "definition": "A model with a flaming brand has the Terror (Cavalry) and Terror (Beast) special rules. Additionally, a model with a flaming brand counts as 2 models rather than 1 when working out how many models are within range of an Objective Marker."
+          },
+          {
+            "name": "Sling",
+            "type": "Bow",
+            "definition": "12\" Range, 1 Strength"
           }
         ]
       }
@@ -982,19 +992,6 @@
         "rename": "Aldamir, Black Flag"
       },
       {
-        "name": "Gloin the Dwarf, Champion of Erebor",
-        "update": {
-          "fight": 5,
-          "might": 2,
-          "points": 90
-        },
-        "rename": "Hadahod, Mountain Rage"
-      },
-      {
-        "name": "Nori the Dwarf, Champion of Erebor",
-        "rename": "Farin, The Unyielding Rock"
-      },
-      {
         "name": "Gimli, Son of Gloin",
         "update": {
           "might": 2,
@@ -1005,16 +1002,6 @@
       {
         "name": "Mahûd King",
         "rename": "Southern Crusader"
-      },
-      {
-        "name": "Arwen Undomiel",
-        "update": {
-          "options": {
-            "name": "Horse",
-            "points": 20
-          }
-        },
-        "rename": "Andriel Lore-master"
       },
       {
         "name": "Halbarad",
@@ -1326,6 +1313,54 @@
             "Unique"
           ]
         }
+      },
+      {
+        "name": "Arwen Undomiel",
+        "update": {
+          "options": [
+            {
+              "name": "Horse",
+              "points": 20
+            }
+          ]
+        },
+        "rename": "Andriel Lore-master"
+      },
+      {
+        "name": "Gloin the Dwarf, Champion of Erebor",
+        "update": {
+          "fight": 5,
+          "might": 2,
+          "points": 90
+        },
+        "rename": "Hadahod, Mountain Rage",
+        "remove": {
+          "specialRules": [
+            "Sworn Protector (Thorin)"
+          ]
+        },
+        "append": {
+          "specialRules": [
+            "Sworn Protector (Erebor General)"
+          ]
+        }
+      },
+      {
+        "name": "Nori the Dwarf, Champion of Erebor",
+        "append": {
+          "specialRules": [
+            "Sworn Protector (Erebor General)"
+          ]
+        },
+        "remove": {
+          "specialRules": [
+            "Sworn Protector (Thorin)"
+          ]
+        },
+        "update": {
+          "attacks": 2
+        },
+        "rename": "Farin, The Unyielding Rock"
       }
     ],
     "warriors": [
@@ -1518,18 +1553,6 @@
         }
       },
       {
-        "name": "Palace Guard",
-        "rename": "Exalted Lindon Warrior",
-        "remove": {
-          "options": [
-            {
-              "name": "Shield and Elven spear",
-              "points": 2
-            }
-          ]
-        }
-      },
-      {
         "name": "Grim Hammer Warrior",
         "append": {
           "specialRules": [
@@ -1658,25 +1681,6 @@
             {
               "name": "Elf Bow",
               "points": 2
-            }
-          ]
-        }
-      },
-      {
-        "name": "Erebor Dwarf Warrior",
-        "update": {
-          "options": [
-            {
-              "name": "Banner",
-              "points": 25
-            },
-            {
-              "name": "Shield",
-              "points": 1
-            },
-            {
-              "name": "Spear",
-              "points": 1
             }
           ]
         }
@@ -2290,6 +2294,60 @@
           "points": 20,
           "specialRules": [
             "Pride of Eriador"
+          ]
+        }
+      },
+      {
+        "name": "Hobbit Militia",
+        "update": {
+          "options": [
+            {
+              "name": "Sling",
+              "points": 0
+            }
+          ]
+        }
+      },
+      {
+        "name": "Palace Guard",
+        "remove": {
+          "options": [
+            {
+              "name": "Shield and Elven spear",
+              "points": 2
+            }
+          ],
+          "specialRules": [
+            "The King's Guard"
+          ]
+        },
+        "rename": "Exalted Lindon Warrior",
+        "append": {
+          "specialRules": [
+            "Guardian of Lindon"
+          ]
+        }
+      },
+      {
+        "name": "Erebor Dwarf Warrior",
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Spear",
+              "points": 1
+            },
+            {
+              "name": "Dwarf bow",
+              "points": 1
+            }
           ]
         }
       }
