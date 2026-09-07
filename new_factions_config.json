@@ -342,16 +342,16 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
-          "name": "Bofur the Dwarf, Champion of Erebor",
-          "heroicTier": "Hero of Fortitude"
-        },
-        {
           "name": "Dwarven Ballista",
           "heroicTier": "Minor Hero"
         },
         {
           "name": "Dwarf Siege Veteran",
           "heroicTier": "Minor Hero"
+        },
+        {
+          "name": "Bifur the Dwarf, Champion of Erebor",
+          "heroicTier": "Hero of Fortitude"
         }
       ],
       "warriors": [
@@ -992,14 +992,6 @@
         "rename": "Aldamir, Black Flag"
       },
       {
-        "name": "Gimli, Son of Gloin",
-        "update": {
-          "might": 2,
-          "points": 95
-        },
-        "rename": "Durin VII, The Last"
-      },
-      {
         "name": "Mahûd King",
         "rename": "Southern Crusader"
       },
@@ -1327,29 +1319,81 @@
         "rename": "Andriel Lore-master"
       },
       {
-        "name": "Gloin the Dwarf, Champion of Erebor",
+        "name": "Iron Hills Captain",
         "update": {
-          "fight": 5,
-          "might": 2,
-          "points": 90
+          "options": [
+            {
+              "name": "War goat",
+              "points": 20
+            },
+            {
+              "name": "Exchange Shield and Spear for Mattock",
+              "points": 0
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gimli, Son of Gloin",
+        "remove": {
+          "specialRules": [
+            "I Myself am sitting pretty on 43"
+          ]
         },
-        "rename": "Hadahod, Mountain Rage",
+        "update": {
+          "might": 2,
+          "points": 95,
+          "options": [
+            {
+              "name": "War goat",
+              "points": 20
+            }
+          ]
+        },
+        "rename": "Durin VII, The Last"
+      },
+      {
+        "name": "Bifur the Dwarf, Champion of Erebor",
+        "append": {
+          "specialRules": [
+            "Sworn Protector (Erebor)"
+          ]
+        },
         "remove": {
           "specialRules": [
             "Sworn Protector (Thorin)"
           ]
         },
+        "update": {
+          "might": 2,
+          "points": 70
+        },
+        "rename": "Fundin, Iron Will"
+      },
+      {
+        "name": "Gloin the Dwarf, Champion of Erebor",
         "append": {
           "specialRules": [
-            "Sworn Protector (Erebor General)"
+            "Sworn Protector (Erebor)"
           ]
-        }
+        },
+        "remove": {
+          "specialRules": [
+            "Sworn Protector (Thorin)"
+          ]
+        },
+        "update": {
+          "fight": 5,
+          "might": 2,
+          "points": 90
+        },
+        "rename": "Hadahod, Mountain Rage"
       },
       {
         "name": "Nori the Dwarf, Champion of Erebor",
         "append": {
           "specialRules": [
-            "Sworn Protector (Erebor General)"
+            "Sworn Protector (Erebor)"
           ]
         },
         "remove": {
