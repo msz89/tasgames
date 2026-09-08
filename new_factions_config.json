@@ -410,10 +410,11 @@
       ],
       "warriors": [
         "Wood Elf Sentinel",
-        "Fledgeling Great Eagle",
         "Lothlorien Warrior",
         "Galadhrim Warrior",
-        "Galadhrim Knight"
+        "Galadhrim Knight",
+        "Mirkwood Hunting Spider",
+        "War Bat"
       ]
     },
     {
@@ -618,6 +619,10 @@
         {
           "name": "Suladan, The Serpent Lord",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Haradrim Taskmaster",
+          "heroicTier": "Hero of Fortitude"
         }
       ],
       "warriors": [
@@ -675,7 +680,8 @@
                 "stat": "shoot",
                 "modifier": 1
               }
-            ]
+            ],
+            "test": "t"
           },
           {
             "name": "Exchange throwing weapon for flaming brand",
@@ -859,10 +865,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "Dwarf Captain",
-        "rename": "Belegost Dwarf Captain"
       },
       {
         "name": "Flói Stonehand",
@@ -1108,23 +1110,6 @@
         "update": {
           "fate": 2
         }
-      },
-      {
-        "name": "Galadhrim Captain",
-        "update": {
-          "points": 65,
-          "options": [
-            {
-              "name": "Shield",
-              "points": 5
-            },
-            {
-              "name": "Elf Bow",
-              "points": 5
-            }
-          ]
-        },
-        "rename": "Lorien Elf Captain"
       },
       {
         "name": "King's Champion Group",
@@ -1405,6 +1390,51 @@
           "attacks": 2
         },
         "rename": "Farin, The Unyielding Rock"
+      },
+      {
+        "name": "Haradrim Taskmaster",
+        "rename": "Aldamar, Black Flag",
+        "append": {
+          "specialRules": [
+            "The Serpent Banner"
+          ]
+        },
+        "update": {
+          "might": 2,
+          "will": 2,
+          "fate": 2,
+          "fight": 5,
+          "points": 85
+        }
+      },
+      {
+        "name": "Dwarf Captain",
+        "update": {
+          "options": [
+            {
+              "name": "Exchange shield for two-handed weapon",
+              "points": 0
+            }
+          ]
+        },
+        "rename": "Belegost Dwarf Captain"
+      },
+      {
+        "name": "Galadhrim Captain",
+        "update": {
+          "points": 70,
+          "options": [
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Elf Bow",
+              "points": 5
+            }
+          ]
+        },
+        "rename": "Lorien Elf Captain"
       }
     ],
     "warriors": [
@@ -1495,10 +1525,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "Ent",
-        "rename": "Iron Golem"
       },
       {
         "name": "Ranger of the North",
@@ -1816,37 +1842,6 @@
             {
               "name": "Elven throwing weapons",
               "points": 2
-            },
-            {
-              "name": "Elf Bow",
-              "points": 2
-            }
-          ]
-        }
-      },
-      {
-        "name": "Galadhrim Warrior",
-        "append": {
-          "specialRules": [
-            "Caras Galadhon Fighting Style"
-          ],
-          "wargear": [
-            "Pike"
-          ]
-        },
-        "update": {
-          "options": [
-            {
-              "name": "Banner",
-              "points": 25
-            },
-            {
-              "name": "Shield",
-              "points": 1
-            },
-            {
-              "name": "Pike",
-              "points": 1
             },
             {
               "name": "Elf Bow",
@@ -2394,6 +2389,52 @@
             }
           ]
         }
+      },
+      {
+        "name": "Iron Hills Chariot",
+        "rename": "Iron Chariot"
+      },
+      {
+        "name": "Corsair Crossbowman"
+      },
+      {
+        "name": "Ent",
+        "rename": "Iron Golem",
+        "update": {
+          "options": []
+        }
+      },
+      {
+        "name": "Galadhrim Warrior",
+        "append": {
+          "specialRules": [
+            "Caras Galadhon Fighting Style"
+          ]
+        },
+        "update": {
+          "options": [
+            {
+              "name": "Banner",
+              "points": 25
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Pike",
+              "points": 1
+            },
+            {
+              "name": "Elf Bow",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "War Bat",
+        "rename": "Hunting Falcon"
       }
     ]
   }
