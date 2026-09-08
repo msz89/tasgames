@@ -3,7 +3,7 @@
         "trackHighestDivision": true
     },
     "appVersion": 2,
-    "disallowMultipleFactions": "False",
+    "disallowMultipleFactions": false,
     "colors": {
         "light": {
             "primary": "#841912",
