@@ -13,7 +13,7 @@
       }
     ],
     "usePrimarySecondaryAllianceLevels": "true",
-    "disallowMultipleFactions": "False",
+    "disallowMultipleFactions": "false",
     "allianceTerms": {
       "primary": "Legendary",
       "secondary": "Broken",
@@ -619,10 +619,6 @@
         {
           "name": "Suladan, The Serpent Lord",
           "heroicTier": "Hero of Fortitude"
-        },
-        {
-          "name": "Haradrim Taskmaster",
-          "heroicTier": "Hero of Fortitude"
         }
       ],
       "warriors": [
@@ -665,6 +661,16 @@
             "name": "Guardian of Lindon",
             "definition": "Whilst within 3\" of a Lindon General, this model gains a bonus of +1 to their Fight Value.",
             "tag": "Active"
+          },
+          {
+            "name": "Oblivious to Pain (5+)",
+            "definition": "Whenever this model suffers a Wound, roll a D6. On a roll of a natural 6, the Wound is ignored.",
+            "tag": "Passive"
+          },
+          {
+            "definition": "Whilst within 3\" of Araphant, friendly Spirit models automatically pass Courage Tests when attempting to Charge a model with the Terror special rule.",
+            "name": "Binder of Shadows",
+            "tag": "Passive"
           }
         ]
       },
@@ -871,22 +877,6 @@
         "rename": "Gilfor, Lore-maker"
       },
       {
-        "name": "Gorbag, Orc Captain",
-        "rename": "Ratbag, Lucky Coward",
-        "append": {
-          "specialRules": [
-            "Oblivious to Pain"
-          ]
-        },
-        "update": {
-          "might": 2
-        }
-      },
-      {
-        "name": "Gróblog",
-        "rename": "Gorkil, Goblin King"
-      },
-      {
         "name": "Grinnah",
         "rename": "Grinnah, The Slippery",
         "update": {
@@ -960,20 +950,6 @@
           "fight": 4
         },
         "rename": "Agenvar, Darkness of Rhun"
-      },
-      {
-        "name": "Easterling Dragon Knight",
-        "rename": "Mohan, Swift Fury",
-        "update": {
-          "fate": 1
-        }
-      },
-      {
-        "name": "Castellan of Dol Guldur",
-        "rename": "Araphant, Shadow of Arthedain",
-        "update": {
-          "defence": 7
-        }
       },
       {
         "name": "Suladan, The Serpent Lord",
@@ -1112,10 +1088,6 @@
         }
       },
       {
-        "name": "King's Champion Group",
-        "rename": "Nogrod Battle Brothers"
-      },
-      {
         "name": "Goroth, Captain of the Morannon",
         "append": {
           "wargear": [
@@ -1137,19 +1109,6 @@
           "options": []
         },
         "rename": "Zog, Blackhammer"
-      },
-      {
-        "name": "The Mouth of Sauron",
-        "rename": "Herumor, Terror of the Seas",
-        "append": {
-          "magicalPowers": [
-            {
-              "name": "Call Winds",
-              "range": 12,
-              "casting": 3
-            }
-          ]
-        }
       },
       {
         "name": "Knight of the White Tower",
@@ -1281,15 +1240,6 @@
           ]
         },
         "rename": "Jafar, Wizard's Apprentice"
-      },
-      {
-        "name": "Mahûd Tribesmaster",
-        "rename": "Aladdin, Southern Crusader",
-        "append": {
-          "unitType": [
-            "Unique"
-          ]
-        }
       },
       {
         "name": "Arwen Undomiel",
@@ -1435,6 +1385,143 @@
           ]
         },
         "rename": "Lorien Elf Captain"
+      },
+      {
+        "name": "Gorbag, Orc Captain",
+        "append": {
+          "specialRules": [
+            "Oblivious to Pain (5+)"
+          ]
+        },
+        "update": {
+          "might": 2
+        },
+        "rename": "Ratbag, Lucky Coward"
+      },
+      {
+        "name": "Gróblog",
+        "rename": "Gorkil, Goblin King",
+        "update": {
+          "options": [
+            {
+              "name": "Giant Scorpion (Mount)",
+              "points": 25
+            }
+          ]
+        }
+      },
+      {
+        "name": "Easterling Captain",
+        "update": {
+          "options": [
+            {
+              "name": "Shield",
+              "points": 5
+            }
+          ]
+        }
+      },
+      {
+        "name": "Easterling Dragon Knight",
+        "update": {
+          "fate": 1,
+          "unlimited": "None"
+        },
+        "rename": "Mohan, Swift Fury",
+        "append": {
+          "unitType": [
+            "Unique"
+          ]
+        }
+      },
+      {
+        "name": "Mahûd Tribesmaster",
+        "append": {
+          "unitType": [
+            "Unique"
+          ],
+          "specialRules": [
+            "Horselord"
+          ]
+        },
+        "rename": "Aladdin, Southern Crusader",
+        "delete": [
+          "unlimited"
+        ]
+      },
+      {
+        "name": "King's Champion Group",
+        "rename": "Nogrod Battle Brothers",
+        "delete": [
+          "unlimited"
+        ],
+        "append": {
+          "unitType": [
+            "Unique"
+          ]
+        }
+      },
+      {
+        "name": "Angmar Orc Captain",
+        "update": {
+          "points": 40,
+          "options": [
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Orc Bow",
+              "points": 5
+            }
+          ]
+        }
+      },
+      {
+        "name": "Castellan of Dol Guldur",
+        "append": {
+          "unitType": [
+            "Unique"
+          ],
+          "specialRules": [
+            "Binder of Shadows"
+          ]
+        },
+        "update": {
+          "defence": 7,
+          "points": 55
+        },
+        "delete": [
+          "unlimited"
+        ],
+        "rename": "Araphant, Shadow of Arthedain",
+        "remove": {
+          "specialRules": [
+            "Bound in Shadow"
+          ]
+        }
+      },
+      {
+        "name": "The Mouth of Sauron",
+        "append": {
+          "magicalPowers": [
+            {
+              "name": "Call Winds",
+              "range": 12,
+              "casting": 3
+            }
+          ]
+        },
+        "rename": "Herumor, Terror of the Seas",
+        "remove": {
+          "magicalPowers": [
+            {
+              "name": "Drain Courage",
+              "range": 12,
+              "casting": 3
+            }
+          ]
+        }
       }
     ],
     "warriors": [
@@ -1543,12 +1630,6 @@
         }
       },
       {
-        "name": "Morgul Stalker",
-        "update": {
-          "shoot": 4
-        }
-      },
-      {
         "name": "Moria Blackshield Warrior",
         "update": {
           "fight": 4
@@ -1565,17 +1646,6 @@
         "append": {
           "wargear": [
             "Anduril, Flame of the West"
-          ]
-        }
-      },
-      {
-        "name": "Isengard Warg Rider",
-        "append": {
-          "options": [
-            {
-              "name": "Orc Bow (4+ Shoot)",
-              "points": 2
-            }
           ]
         }
       },
@@ -1923,17 +1993,6 @@
             {
               "name": "Two-handed weapon",
               "points": 1
-            }
-          ]
-        }
-      },
-      {
-        "name": "Black Numenorean Knight",
-        "remove": {
-          "options": [
-            {
-              "name": "Exchange lance for war horn",
-              "points": 25
             }
           ]
         }
@@ -2435,6 +2494,82 @@
       {
         "name": "War Bat",
         "rename": "Hunting Falcon"
+      },
+      {
+        "name": "Black Numenorean Knight",
+        "remove": {
+          "options": [
+            {
+              "name": "Exchange lance for war horn",
+              "points": 25
+            }
+          ]
+        },
+        "update": {
+          "options": [
+            {
+              "name": "Exchange lance for banner",
+              "points": 23
+            }
+          ]
+        }
+      },
+      {
+        "name": "Morgul Stalker",
+        "update": {
+          "shoot": 4,
+          "options": [
+            {
+              "name": "Orc Bow",
+              "points": 1
+            }
+          ]
+        }
+      },
+      {
+        "name": "Isengard Warg Rider",
+        "update": {
+          "options": [
+            {
+              "name": "Orc Bow (4+ Shoot)",
+              "points": 2
+            },
+            {
+              "name": "Shield",
+              "points": 1
+            },
+            {
+              "name": "Throwing spear",
+              "points": 1
+            },
+            {
+              "name": "Orc Bow (4+ Shoot)",
+              "points": 2
+            }
+          ]
+        }
+      },
+      {
+        "name": "War Drake of Rhun",
+        "update": {
+          "options": [
+            {
+              "name": "Armour",
+              "points": 5
+            }
+          ]
+        }
+      },
+      {
+        "name": "Khandish Charioteer",
+        "append": {
+          "options": [
+            {
+              "name": "War spear",
+              "points": 5
+            }
+          ]
+        }
       }
     ]
   }
