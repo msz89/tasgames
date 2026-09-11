@@ -412,7 +412,14 @@ def attach_hero_factions(datafile, custom_factions):
 
     return True
 
-def attach_factions_with_mapping(output, conf, hero_faction_mapping, warrior_faction_mapping):
+def attach_factions_with_mapping(
+        output, 
+        conf, 
+        hero_faction_mapping, 
+        warrior_faction_mapping,
+        hero_faction_keywords,
+        warrior_faction_keywords
+        ):
     """Attach factions to profiles using pre-built mappings."""
     # First add the faction definitions
     add_factions(output, conf["customFactions"])
@@ -444,6 +451,7 @@ def attach_factions_with_mapping(output, conf, hero_faction_mapping, warrior_fac
             continue
         
         hero["factions"] = faction_list
+        hero["faction"] = hero_faction_keywords[output_name]
     
     # Attach warrior factions
     warrior_lookup = {
@@ -461,6 +469,8 @@ def attach_factions_with_mapping(output, conf, hero_faction_mapping, warrior_fac
             continue
         
         warrior["factions"] = faction_list
+        warrior["faction"] = warrior_faction_keywords[output_name]
+
     
     return True
 
@@ -633,9 +643,13 @@ def build_custom_factions_file(source_file, config_file, output_file):
     # Build mapping of output_name -> [faction_names] for attaching factions
     hero_faction_mapping = {}  # output_name -> [(faction_name, heroic_tier), ...]
     warrior_faction_mapping = {}  # output_name -> [faction_name, ...]
+    hero_faction_keywords = {}
+    warrior_faction_keywords = {}
+
     
     for faction in conf["customFactions"]:
         faction_name = faction["name"]
+        faction_keyword = faction["factionKeyword"]
         
         for hero_config in faction.get("heroes", []):
             if isinstance(hero_config, str):
@@ -651,7 +665,8 @@ def build_custom_factions_file(source_file, config_file, output_file):
                 "name": faction_name,
                 "heroicTier": heroic_tier
             })
-        
+            hero_faction_keywords[output_name] = faction_keyword
+
         for warrior_config in faction.get("warriors", []):
             if isinstance(warrior_config, str):
                 output_name = warrior_config
@@ -661,6 +676,7 @@ def build_custom_factions_file(source_file, config_file, output_file):
             if output_name not in warrior_faction_mapping:
                 warrior_faction_mapping[output_name] = []
             warrior_faction_mapping[output_name].append(faction_name)
+            warrior_faction_keywords[output_name] = faction_keyword
     
     # Normalize faction configs to use only source names as strings
     normalize_faction_configs(conf)
@@ -676,7 +692,7 @@ def build_custom_factions_file(source_file, config_file, output_file):
 
     add_heroes(output, hero_profiles_to_create, hero_index)
     add_warriors(output, warrior_profiles_to_create, warrior_index)
-    attach_factions_with_mapping(output, conf, hero_faction_mapping, warrior_faction_mapping)
+    attach_factions_with_mapping(output, conf, hero_faction_mapping, warrior_faction_mapping,hero_faction_keywords,warrior_faction_keywords)
     transplant_profiles(src=src, output=output, conf=conf)
     customise_profiles(output=output, conf=conf)
     insert_objects(output=output, conf=conf)

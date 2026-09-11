@@ -12,10 +12,10 @@
         "text": "Original Data provided by Now For Wrath, modified for Legions of Legends"
       }
     ],
-    "usePrimarySecondaryAllianceLevels": "true",
-    "disallowMultipleFactions": "false",
+    "usePrimarySecondaryAllianceLevels": true,
+    "disallowMultipleFactions": false,
     "allianceTerms": {
-      "primary": "Legendary",
+      "primary": "Legendary Alliance",
       "secondary": "Broken",
       "none": "Forbidden"
     },
@@ -47,6 +47,7 @@
     {
       "name": "Gondor",
       "alignment": "Kingdoms of Men",
+      "factionKeyword": "Gondor",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -70,6 +71,10 @@
         {
           "name": "Captain of Numenor",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Captain of Minas Tirith",
+          "heroicTier": "Hero of Fortitude"
         }
       ],
       "warriors": [
@@ -86,6 +91,7 @@
     {
       "name": "Rohan",
       "alignment": "Kingdoms of Men",
+      "factionKeyword": "Rohan",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -93,6 +99,11 @@
         {
           "name": "Captain of Rohan",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Captain of Rohan",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Hero of Rohan"
         },
         {
           "name": "Olwyn, Shieldmaiden of Rohan",
@@ -113,6 +124,7 @@
     {
       "name": "Dale",
       "alignment": "Kingdoms of Men",
+      "factionKeyword": "Dale",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -151,6 +163,7 @@
     {
       "name": "Arnor",
       "alignment": "Kingdoms of Men",
+      "factionKeyword": "Arnor",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -188,6 +201,7 @@
     {
       "name": "Forgiven South",
       "alignment": "Kingdoms of Men",
+      "factionKeyword": "Harad",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -231,6 +245,7 @@
     {
       "name": "Eriador",
       "alignment": "Kingdoms of Men",
+      "factionKeyword": "Eriador",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -270,6 +285,7 @@
     {
       "name": "Lindon",
       "alignment": "Children of the Valar",
+      "factionKeyword": "Lindon",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -297,6 +313,7 @@
     {
       "name": "Erebor",
       "alignment": "Children of the Valar",
+      "factionKeyword": "Erebor",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -329,6 +346,7 @@
     {
       "name": "The Iron Hills",
       "alignment": "Children of the Valar",
+      "factionKeyword": "Iron Hills",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -364,6 +382,7 @@
     {
       "name": "Mirkwood",
       "alignment": "Children of the Valar",
+      "factionKeyword": "Mirkwood",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -391,6 +410,7 @@
     {
       "name": "Lorien",
       "alignment": "Children of the Valar",
+      "factionKeyword": "Lorien",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -420,6 +440,7 @@
     {
       "name": "Blue Mountains",
       "alignment": "Children of the Valar",
+      "factionKeyword": "Blue Mountains",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -455,6 +476,7 @@
     {
       "name": "Mordor",
       "alignment": "Remnants of Evil",
+      "factionKeyword": "Mordor",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -491,6 +513,7 @@
     {
       "name": "Misty Mountains",
       "alignment": "Remnants of Evil",
+      "factionKeyword": "Misty Mountains",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -519,6 +542,7 @@
     {
       "name": "Isengard",
       "alignment": "Remnants of Evil",
+      "factionKeyword": "Isengard",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -547,6 +571,7 @@
     {
       "name": "Rhun",
       "alignment": "Remnants of Evil",
+      "factionKeyword": "Rhun",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -576,6 +601,7 @@
     {
       "name": "Angmar",
       "alignment": "Remnants of Evil",
+      "factionKeyword": "Angmar",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -604,6 +630,7 @@
     {
       "name": "Umbar",
       "alignment": "Remnants of Evil",
+      "factionKeyword": "Umbar",
       "additionalRules": [],
       "armyBonuses": [],
       "specialRules": [],
@@ -952,24 +979,6 @@
         "rename": "Agenvar, Darkness of Rhun"
       },
       {
-        "name": "Suladan, The Serpent Lord",
-        "update": {
-          "attacks": 2,
-          "wounds": 2,
-          "might": 2,
-          "will": 2,
-          "fate": 2,
-          "points": 90,
-          "options": [
-            {
-              "name": "Horse",
-              "points": 20
-            }
-          ]
-        },
-        "rename": "Aldamir, Black Flag"
-      },
-      {
         "name": "Mahûd King",
         "rename": "Southern Crusader"
       },
@@ -1184,27 +1193,6 @@
           ]
         },
         "rename": "Rogar, Warden of Rohan"
-      },
-      {
-        "name": "Captain of Dale",
-        "update": {
-          "options": [
-            {
-              "name": "Shield",
-              "points": 5
-            },
-            {
-              "name": "Esgaroth Bow",
-              "points": 5
-            }
-          ],
-          "points": 50,
-          "wargear": [
-            "Armour",
-            "Hand weapon"
-          ],
-          "defence": 5
-        }
       },
       {
         "name": "Ranger of the North",
@@ -1422,19 +1410,6 @@
         }
       },
       {
-        "name": "Easterling Dragon Knight",
-        "update": {
-          "fate": 1,
-          "unlimited": "None"
-        },
-        "rename": "Mohan, Swift Fury",
-        "append": {
-          "unitType": [
-            "Unique"
-          ]
-        }
-      },
-      {
         "name": "Mahûd Tribesmaster",
         "append": {
           "unitType": [
@@ -1522,6 +1497,155 @@
             }
           ]
         }
+      },
+      {
+        "name": "Suladan, The Serpent Lord",
+        "update": {
+          "attacks": 2,
+          "wounds": 2,
+          "might": 2,
+          "will": 2,
+          "fate": 2,
+          "points": 85,
+          "options": [
+            {
+              "name": "Horse",
+              "points": 20
+            }
+          ],
+          "specialRules": [
+            "Poisoned Attacks",
+            "The Serpent Banner"
+          ],
+          "heroicActions": [
+            "Heroic March",
+            "Heroic Resolve"
+          ]
+        },
+        "rename": "Aldamir, Black Flag"
+      },
+      {
+        "name": "Easterling Dragon Knight",
+        "append": {
+          "unitType": [
+            "Unique"
+          ]
+        },
+        "update": {
+          "fate": 1
+        },
+        "delete": [
+          "unlimited"
+        ],
+        "rename": "Mohan, Swift Fury"
+      },
+      {
+        "name": "Captain of Dale",
+        "update": {
+          "options": [
+            {
+              "name": "Shield",
+              "points": 5
+            },
+            {
+              "name": "Esgaroth Bow",
+              "points": 5
+            }
+          ],
+          "wargear": [
+            "Armour",
+            "Hand weapon"
+          ],
+          "defence": 5
+        }
+      },
+      {
+        "name": "Hero of Rohan",
+        "update": {
+          "fight": 3,
+          "strength": 3,
+          "defence": 4,
+          "attacks": 1,
+          "might": 1,
+          "specialRules": [
+            {
+              "name": "Expert Rider"
+            },
+            {
+              "name": "Horse Lord",
+              "description": "None"
+            }
+          ],
+          "points": 25,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ]
+        }
+      },
+      {
+        "name": "Captain of Minas Tirith",
+        "update": {
+          "strength": 3,
+          "defence": 4,
+          "attacks": 1,
+          "might": 1,
+          "wargear": [
+            "Hand weapon"
+          ],
+          "specialRules": [],
+          "faction": "Gondor",
+          "points": 35,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ]
+        },
+        "rename": "Hero of Gondor (custom)"
       }
     ],
     "warriors": [
