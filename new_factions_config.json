@@ -74,7 +74,8 @@
         },
         {
           "name": "Captain of Minas Tirith",
-          "heroicTier": "Hero of Fortitude"
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Hero of Gondor (Custom)"
         }
       ],
       "warriors": [
@@ -103,7 +104,7 @@
         {
           "name": "Captain of Rohan",
           "heroicTier": "Hero of Fortitude",
-          "duplicateAs": "Hero of Rohan"
+          "duplicateAs": "Hero of Rohan (Custom)"
         },
         {
           "name": "Olwyn, Shieldmaiden of Rohan",
@@ -132,6 +133,11 @@
         {
           "name": "Captain of Dale",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Captain of Dale",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Hero of Dale (Custom)"
         },
         {
           "name": "Anborn, Ranger of Ithilien",
@@ -173,6 +179,11 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
+          "name": "Captain of Arnor",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Hero of Arnor (Custom)"
+        },
+        {
           "name": "Malbeth the Seer",
           "heroicTier": "Hero of Fortitude"
         },
@@ -209,6 +220,11 @@
         {
           "name": "Haradrim Chieftain",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Haradrim Chieftain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Hero of Harad (Custom)"
         },
         {
           "name": "Brorgir the Conjurer",
@@ -255,6 +271,11 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
+          "name": "Captain of Minas Tirith",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Hero of Eriador (Custom)"
+        },
+        {
           "name": "Angbor the Fearless",
           "heroicTier": "Hero of Fortitude"
         },
@@ -295,6 +316,11 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
+          "name": "Rivendell Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Champion of Lindon (Custom)"
+        },
+        {
           "name": "Erestor",
           "heroicTier": "Hero of Fortitude"
         },
@@ -321,6 +347,11 @@
         {
           "name": "Erebor Dwarf Captain",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Erebor Dwarf Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Champion of Erebor (Custom)"
         },
         {
           "name": "Gloin the Dwarf, Champion of Erebor",
@@ -354,6 +385,11 @@
         {
           "name": "Iron Hills Captain",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Iron Hills Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Champion of the Iron Hills (Custom)"
         },
         {
           "name": "Gimli, Son of Gloin",
@@ -392,6 +428,11 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
+          "name": "Mirkwood Ranger Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Champion of Mirkwood (Custom)"
+        },
+        {
           "name": "Tauriel, Ranger of Mirkwood",
           "heroicTier": "Hero of Fortitude"
         },
@@ -420,6 +461,11 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
+          "name": "Galadhrim Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Champion of Lorien (Custom)"
+        },
+        {
           "name": "Lothlorien Captain",
           "heroicTier": "Hero of Fortitude"
         },
@@ -438,7 +484,7 @@
       ]
     },
     {
-      "name": "Blue Mountains",
+      "name": "The Blue Mountains",
       "alignment": "Children of the Valar",
       "factionKeyword": "Blue Mountains",
       "additionalRules": [],
@@ -448,6 +494,11 @@
         {
           "name": "Dwarf Captain",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Dwarf Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Champion of Nogrod (Custom)"
         },
         {
           "name": "King's Champion Group",
@@ -486,6 +537,11 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
+          "name": "Mordor Orc Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Villain of Mordor (Custom)"
+        },
+        {
           "name": "Goroth, Captain of the Morannon",
           "heroicTier": "Hero of Fortitude"
         },
@@ -511,7 +567,7 @@
       ]
     },
     {
-      "name": "Misty Mountains",
+      "name": "The Misty Mountains",
       "alignment": "Remnants of Evil",
       "factionKeyword": "Misty Mountains",
       "additionalRules": [],
@@ -521,6 +577,11 @@
         {
           "name": "Moria Goblin Captain",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Moria Goblin Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Villain of Moria (Custom)"
         },
         {
           "name": "Grinnah",
@@ -552,6 +613,11 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
+          "name": "Uruk-Hai Scout Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Villain of Isengard (Custom)"
+        },
+        {
           "name": "Yazneg, Hunter Orc Captain",
           "heroicTier": "Hero of Fortitude"
         },
@@ -579,6 +645,11 @@
         {
           "name": "Easterling Captain",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Easterling Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Villain of Rhun (Custom)"
         },
         {
           "name": "The Shadow of Rhudaur",
@@ -611,6 +682,11 @@
           "heroicTier": "Hero of Fortitude"
         },
         {
+          "name": "Angmar Orc Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Villain of Angmar (Custom)"
+        },
+        {
           "name": "Castellan of Dol Guldur",
           "heroicTier": "Hero of Fortitude"
         },
@@ -638,6 +714,11 @@
         {
           "name": "Corsair Captain",
           "heroicTier": "Hero of Fortitude"
+        },
+        {
+          "name": "Corsair Captain",
+          "heroicTier": "Hero of Fortitude",
+          "duplicateAs": "Villain of Umbar (Custom)"
         },
         {
           "name": "The Mouth of Sauron",
@@ -1560,23 +1641,61 @@
         }
       },
       {
-        "name": "Hero of Rohan",
+        "name": "Hero of Gondor (Custom)",
         "update": {
-          "fight": 3,
           "strength": 3,
           "defence": 4,
-          "attacks": 1,
+          "attack": 1,
           "might": 1,
-          "specialRules": [
+          "wargear": [],
+          "specialRules": [],
+          "faction": "Gondor",
+          "points": 35,
+          "options": [
             {
-              "name": "Expert Rider"
+              "name": "Increase cost by 5",
+              "points": 5
             },
             {
-              "name": "Horse Lord",
-              "description": "None"
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
             }
           ],
-          "points": 25,
+          "fight": 5,
+          "courage": 6,
+          "intelligence": 6
+        }
+      },
+      {
+        "name": "Hero of Arnor (Custom)",
+        "update": {
+          "points": 30,
+          "fight": 4,
+          "strength": 3,
+          "defence": 5,
+          "attack": 1,
+          "courage": 6,
+          "intelligence": 6,
+          "might": 1,
+          "specialRules": [
+            "Ancient Enemy (Angmar)"
+          ],
           "options": [
             {
               "name": "Increase cost by 5",
@@ -1606,17 +1725,195 @@
         }
       },
       {
-        "name": "Captain of Minas Tirith",
+        "name": "Hero of Rohan (Custom)",
         "update": {
+          "fight": 3,
           "strength": 3,
           "defence": 4,
-          "attacks": 1,
+          "attack": 1,
           "might": 1,
+          "specialRules": [
+            "Expert Rider",
+            "Horse Lord"
+          ],
+          "points": 25,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ]
+        }
+      },
+      {
+        "name": "Hero of Dale (Custom)",
+        "update": {
+          "fight": 4,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Sharpshooter",
+            "Hatred (Drake)"
+          ],
+          "points": 30,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
           "wargear": [
             "Hand weapon"
           ],
+          "courage": 6,
+          "intelligence": 6
+        }
+      },
+      {
+        "name": "Hero of Harad (Custom)",
+        "update": {
+          "fight": 3,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Poisoned Attacks (Bow)"
+          ],
+          "points": 25,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ],
+          "courage": 5,
+          "intelligence": 5
+        }
+      },
+      {
+        "name": "Hero of Eriador (Custom)",
+        "update": {
+          "fight": 4,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
           "specialRules": [],
-          "faction": "Gondor",
+          "points": 25,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ],
+          "courage": 5,
+          "intelligence": 6
+        }
+      },
+      {
+        "name": "Champion of Lindon (Custom)",
+        "update": {
+          "fight": 5,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Expert Rider",
+            "Woodland Creature"
+          ],
           "points": 35,
           "options": [
             {
@@ -1643,9 +1940,512 @@
               "name": "Increase cost by 50",
               "points": 50
             }
+          ],
+          "wargear": [
+            "Elven Hand-and-a-half weapon"
+          ],
+          "courage": 4,
+          "intelligence": 4
+        }
+      },
+      {
+        "name": "Champion of Erebor (Custom)",
+        "update": {
+          "fight": 4,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Mountain Dweller"
+          ],
+          "points": 30,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Dual Hand weapons"
+          ],
+          "courage": 5,
+          "intelligence": 6
+        }
+      },
+      {
+        "name": "Champion of the Iron Hills (Custom)",
+        "update": {
+          "fight": 4,
+          "strength": 4,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Mountain Dweller"
+          ],
+          "points": 30,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ],
+          "courage": 5,
+          "intelligence": 5
+        }
+      },
+      {
+        "name": "Champion of Mirkwood (Custom)",
+        "update": {
+          "fight": 5,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Woodland Creature"
+          ],
+          "points": 35,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Elven Hand-and-a-half weapon"
+          ],
+          "shoot": 3,
+          "courage": 4,
+          "intelligence": 5
+        }
+      },
+      {
+        "name": "Champion of Lorien (Custom)",
+        "update": {
+          "fight": 5,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Woodland Creature",
+            "Sharpshooter"
+          ],
+          "points": 35,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ],
+          "shoot": 3,
+          "courage": 4,
+          "intelligence": 4
+        }
+      },
+      {
+        "name": "Champion of Nogrod (Custom)",
+        "update": {
+          "fight": 4,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Mountain Dweller",
+            "Ancient Enemies (Goblin)"
+          ],
+          "points": 30,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon",
+            "Throwing Weapons"
+          ],
+          "courage": 5,
+          "intelligence": 5
+        }
+      },
+      {
+        "name": "Villain of Mordor (Custom)",
+        "update": {
+          "fight": 3,
+          "strength": 4,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "End the Race of Men"
+          ],
+          "points": 25,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ],
+          "courage": 7,
+          "intelligence": 7
+        }
+      },
+      {
+        "name": "Villain of Moria (Custom)",
+        "update": {
+          "fight": 2,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Cave Dweller"
+          ],
+          "points": 20,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ],
+          "courage": 7,
+          "intelligence": 7
+        }
+      },
+      {
+        "name": "Villain of Isengard (Custom)",
+        "update": {
+          "fight": 4,
+          "strength": 4,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Hatred Rohan"
+          ],
+          "points": 30,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ],
+          "courage": 5,
+          "intelligence": 5
+        }
+      },
+      {
+        "name": "Villain of Rhun (Custom)",
+        "update": {
+          "fight": 4,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Phalanx"
+          ],
+          "points": 30,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
           ]
-        },
-        "rename": "Hero of Gondor (custom)"
+        }
+      },
+      {
+        "name": "Villain of Angmar (Custom)",
+        "update": {
+          "fight": 3,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Terror"
+          ],
+          "points": 25,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ],
+          "courage": 7,
+          "intelligence": 7
+        }
+      },
+      {
+        "name": "Villain of Umbar (Custom)",
+        "update": {
+          "fight": 4,
+          "strength": 3,
+          "defence": 4,
+          "attack": 1,
+          "might": 1,
+          "specialRules": [
+            "Terror",
+            "Visage of Terror"
+          ],
+          "points": 30,
+          "options": [
+            {
+              "name": "Increase cost by 5",
+              "points": 5
+            },
+            {
+              "name": "Increase cost by 10",
+              "points": 10
+            },
+            {
+              "name": "Increase cost by 20",
+              "points": 20
+            },
+            {
+              "name": "Increase cost by 30",
+              "points": 30
+            },
+            {
+              "name": "Increase cost by 40",
+              "points": 40
+            },
+            {
+              "name": "Increase cost by 50",
+              "points": 50
+            }
+          ],
+          "wargear": [
+            "Hand weapon"
+          ],
+          "courage": 5,
+          "intelligence": 6
+        }
       }
     ],
     "warriors": [

@@ -88,15 +88,22 @@ def effective_profile_name(profile: Any) -> str | None:
 
 
 def faction_profiles(faction: dict[str, Any], level: str) -> list[str]:
-    # for profile in faction.get(level,[]):
-    #     print(profile)
-    #     print(effective_profile_name(profile))
-    #     break
     names = [
         effective_profile_name(profile)
         for profile in faction.get(level, [])
     ]
     return [name for name in names if name]
+
+
+def custom_faction_profile_names(config: dict[str, Any], level: str) -> list[str]:
+    names: list[str] = []
+    for faction in config.get("customFactions", []):
+        if not isinstance(faction, dict):
+            continue
+        for name in faction_profiles(faction, level):
+            if name not in names:
+                names.append(name)
+    return names
 
 
 def find_customisation(customisations: list[dict[str, Any]], profile_name: str) -> dict[str, Any] | None:
@@ -408,6 +415,41 @@ def render_insert_objects_editor(customisations: dict[str, Any]) -> None:
         except (TypeError, ValueError, json.JSONDecodeError) as error:
             st.error(str(error))
 
+def render_profile_editor(
+    config: dict[str, Any],
+) -> None:
+    st.subheader("Profile editor")
+    st.caption("Edit profiles line by line, all changes are update/replace.")
+
+    level_label = st.selectbox("Unit type", ["Heroes", "Warriors"], key="profile_editor_level")
+    level = level_label.lower()
+
+    profile_names = custom_faction_profile_names(config, level)
+    if not profile_names:
+        st.warning(f"No {level} profiles found in the custom factions.")
+        return
+
+    profile_search = st.text_input(
+        "Search profiles",
+        key=f"profile_editor_search_{level}",
+        placeholder="Type to filter profiles",
+    )
+    search_text = profile_search.strip().casefold()
+    filtered_profile_names = [
+        name for name in profile_names if search_text in name.casefold()
+    ]
+
+    if not filtered_profile_names:
+        st.info("No profiles match your search.")
+        return
+
+    selected_profile = st.selectbox(
+        "Profile",
+        filtered_profile_names,
+        key=f"profile_editor_profile_{level}",
+    )
+    st.caption(f"Selected profile: {selected_profile}")
+    
 
 def rows_to_customisation(profile_name: str, rows: list[dict[str, Any]]) -> dict[str, Any]:
     customisation: dict[str, Any] = {"name": profile_name}
@@ -586,14 +628,17 @@ selected_faction = next(
 
 st.title("Legions customisation editor")
 
-faction_tab, profile_tab, insert_objects_tab = st.tabs(
-    ["Faction editor", "Profile customisations", "Insert objects"]
+faction_tab, profile_tab, insert_objects_tab, profile_editor_tab = st.tabs(
+    ["Faction editor", "Profile customisations", "Insert objects", "Profile editor"]
 )
 with faction_tab:
     render_faction_editor(config, selected_faction, st.session_state.mesbg_profile_data)
 
 with insert_objects_tab:
     render_insert_objects_editor(customisations)
+
+# with profile_editor_tab:
+#     render_profile_editor(config)
 
 with profile_tab:
     # st.subheader("1. Select unit type")
